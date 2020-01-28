@@ -9,12 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var login: UIScrollView!
+    @IBOutlet weak var pass: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        
+        
     }
 
-
+    @IBAction func btnTapp(_ sender: UIButton){
+        print(#function)
+    }
 }
 
