@@ -15,6 +15,10 @@
 		37001D2923E0A37F00DA889E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37001D2723E0A37F00DA889E /* LaunchScreen.storyboard */; };
 		37001D3423E0A37F00DA889E /* loginViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37001D3323E0A37F00DA889E /* loginViewTests.swift */; };
 		37001D3F23E0A37F00DA889E /* loginViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37001D3E23E0A37F00DA889E /* loginViewUITests.swift */; };
+		CD2ED46C23E4A7BC0034A2DD /* firstTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2ED46B23E4A7BC0034A2DD /* firstTabBarViewController.swift */; };
+		CD2ED46E23E4AAFE0034A2DD /* friendsTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2ED46D23E4AAFE0034A2DD /* friendsTableTableViewController.swift */; };
+		CD2ED47023E4AFCD0034A2DD /* UserGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2ED46F23E4AFCD0034A2DD /* UserGroup.swift */; };
+		CD2ED47223E4B0130034A2DD /* GlobalSearchGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2ED47123E4B0130034A2DD /* GlobalSearchGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		37001D3A23E0A37F00DA889E /* loginViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = loginViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37001D3E23E0A37F00DA889E /* loginViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewUITests.swift; sourceTree = "<group>"; };
 		37001D4023E0A37F00DA889E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD2ED46B23E4A7BC0034A2DD /* firstTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstTabBarViewController.swift; sourceTree = "<group>"; };
+		CD2ED46D23E4AAFE0034A2DD /* friendsTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = friendsTableTableViewController.swift; sourceTree = "<group>"; };
+		CD2ED46F23E4AFCD0034A2DD /* UserGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGroup.swift; sourceTree = "<group>"; };
+		CD2ED47123E4B0130034A2DD /* GlobalSearchGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalSearchGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,10 @@
 				37001D1E23E0A37E00DA889E /* SceneDelegate.swift */,
 				37001D2023E0A37E00DA889E /* ViewController.swift */,
 				37001D2223E0A37E00DA889E /* Main.storyboard */,
+				CD2ED47123E4B0130034A2DD /* GlobalSearchGroup.swift */,
+				CD2ED46F23E4AFCD0034A2DD /* UserGroup.swift */,
+				CD2ED46D23E4AAFE0034A2DD /* friendsTableTableViewController.swift */,
+				CD2ED46B23E4A7BC0034A2DD /* firstTabBarViewController.swift */,
 				37001D2523E0A37F00DA889E /* Assets.xcassets */,
 				37001D2723E0A37F00DA889E /* LaunchScreen.storyboard */,
 				37001D2A23E0A37F00DA889E /* Info.plist */,
@@ -260,7 +272,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				37001D2123E0A37E00DA889E /* ViewController.swift in Sources */,
+				CD2ED46E23E4AAFE0034A2DD /* friendsTableTableViewController.swift in Sources */,
+				CD2ED46C23E4A7BC0034A2DD /* firstTabBarViewController.swift in Sources */,
 				37001D1D23E0A37E00DA889E /* AppDelegate.swift in Sources */,
+				CD2ED47223E4B0130034A2DD /* GlobalSearchGroup.swift in Sources */,
+				CD2ED47023E4AFCD0034A2DD /* UserGroup.swift in Sources */,
 				37001D1F23E0A37E00DA889E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
