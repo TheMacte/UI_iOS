@@ -61,7 +61,6 @@
                                 <constraints>
                                     <constraint firstItem="F4w-a3-jvD" firstAttribute="top" secondItem="Nb9-ff-Mdn" secondAttribute="bottom" constant="114" id="2lZ-A4-9nY"/>
                                     <constraint firstItem="Yxs-Be-Ghn" firstAttribute="centerX" secondItem="vJM-3r-EtX" secondAttribute="centerX" id="51Q-w4-AK8"/>
-                                    <constraint firstItem="Yxs-Be-Ghn" firstAttribute="leading" secondItem="vJM-3r-EtX" secondAttribute="leading" constant="97" id="9iJ-jJ-Ded"/>
                                     <constraint firstItem="cRd-RF-5g6" firstAttribute="top" secondItem="jbZ-rZ-hcr" secondAttribute="bottom" constant="114" id="T4t-0Q-VBX"/>
                                     <constraint firstAttribute="trailing" secondItem="Nb9-ff-Mdn" secondAttribute="trailing" constant="97" id="YGw-Ij-bWa"/>
                                     <constraint firstItem="jbZ-rZ-hcr" firstAttribute="top" secondItem="F4w-a3-jvD" secondAttribute="bottom" constant="10" id="bJi-bA-W3C"/>
@@ -74,7 +73,6 @@
                                     <constraint firstItem="Nb9-ff-Mdn" firstAttribute="centerX" secondItem="XHP-hU-eGE" secondAttribute="centerX" id="mn6-aJ-6ri"/>
                                     <constraint firstItem="XHP-hU-eGE" firstAttribute="centerX" secondItem="Yxs-Be-Ghn" secondAttribute="centerX" id="q4U-JQ-hCq"/>
                                     <constraint firstAttribute="bottom" secondItem="cRd-RF-5g6" secondAttribute="bottom" constant="213" id="qXc-qu-Gbx"/>
-                                    <constraint firstAttribute="trailing" secondItem="Yxs-Be-Ghn" secondAttribute="trailing" constant="97" id="qXk-L5-n4t"/>
                                     <constraint firstAttribute="trailing" secondItem="jbZ-rZ-hcr" secondAttribute="trailing" constant="97" id="v68-1t-A12"/>
                                     <constraint firstItem="Yxs-Be-Ghn" firstAttribute="top" secondItem="vJM-3r-EtX" secondAttribute="top" constant="42" id="ve1-SW-fUA"/>
                                     <constraint firstItem="Nb9-ff-Mdn" firstAttribute="leading" secondItem="vJM-3r-EtX" secondAttribute="leading" constant="97" id="zAV-BX-Rco"/>
