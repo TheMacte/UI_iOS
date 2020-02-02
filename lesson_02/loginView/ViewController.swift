@@ -67,6 +67,28 @@ class ViewController: UIViewController {
     @IBAction func btnTapp(_ sender: UIButton){
         print(#function)
     }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        let ownLogin = login.text!
+        let ownPassword = password.text!
+        
+        if ownLogin == "admin" && ownPassword == "123456" {
+            return true
+        } else {
+            // Создаем контроллер
+            let alert = UIAlertController(title: "Ошибка", message: "Введены неверные данные пользователя", preferredStyle: .alert)
+            // Создаем кнопку для UIAlertController
+            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            // Добавляем кнопку на UIAlertController
+            alert.addAction(action)
+            // Показываем UIAlertController
+            present(alert, animated: true, completion: nil)
+            
+            return false
+        }
+    }
+
+
 
 }
 
