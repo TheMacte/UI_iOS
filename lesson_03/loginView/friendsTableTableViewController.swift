@@ -9,6 +9,22 @@
 import UIKit
 
 class friendsTableTableViewController: UITableViewController {
+    
+    let friends = [
+        "Alla",
+        "Boris",
+        "Clara",
+        "Dmitriy"
+    ]
+    
+/*
+    @IBOutlet override var tableView: UITableView! {
+        didSet {
+            tableView.delegate = self
+            tableView.dataSource = self
+        }
+    }
+ */
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,26 +38,28 @@ class friendsTableTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+    /*
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
     }
+    */
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return friends.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsCell", for: indexPath) as? FriendsCell else {
+            preconditionFailure("Can't create")
+        }
+        let friendName = friends[indexPath.row]
+        cell.FriendCellLable.text = friendName
 
         return cell
     }
-    */
-
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
