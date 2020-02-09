@@ -11,7 +11,7 @@ import UIKit
 class FriendsCell: UITableViewCell {
     
     @IBOutlet weak var FriendCellLable: UILabel!
-    
+    @IBOutlet weak var userPicView: UIImageView!
     
     /*
     override func awakeFromNib() {

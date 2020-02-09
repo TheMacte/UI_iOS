@@ -125,7 +125,7 @@
         <scene sceneID="b4W-Uz-DvV">
             <objects>
                 <tableViewController title="Friends" id="b7D-ap-88T" customClass="friendsTableTableViewController" customModule="loginView" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vDR-d2-OtR">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vDR-d2-OtR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -138,21 +138,27 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUX-3a-Y6p">
-                                            <rect key="frame" x="20" y="20" width="374" height="21.5"/>
+                                            <rect key="frame" x="108" y="20" width="286" height="21.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userpick" id="WJB-Ti-bUa">
+                                            <rect key="frame" x="20" y="1" width="61" height="60"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="EUX-3a-Y6p" firstAttribute="leading" secondItem="ARr-Gn-KJP" secondAttribute="leading" constant="20" id="Kh8-Dr-S4r"/>
-                                        <constraint firstItem="EUX-3a-Y6p" firstAttribute="top" secondItem="ARr-Gn-KJP" secondAttribute="top" constant="20" symbolic="YES" id="PCv-t4-Oub"/>
-                                        <constraint firstAttribute="bottom" secondItem="EUX-3a-Y6p" secondAttribute="bottom" constant="20" symbolic="YES" id="chB-A6-QAB"/>
-                                        <constraint firstAttribute="trailing" secondItem="EUX-3a-Y6p" secondAttribute="trailing" constant="20" id="zHZ-lY-2Oh"/>
+                                        <constraint firstItem="EUX-3a-Y6p" firstAttribute="leading" secondItem="WJB-Ti-bUa" secondAttribute="trailing" constant="26.999999999999773" id="3FS-bW-0Iz"/>
+                                        <constraint firstItem="EUX-3a-Y6p" firstAttribute="top" secondItem="ARr-Gn-KJP" secondAttribute="top" constant="20" symbolic="YES" id="Dk6-KI-Phk"/>
+                                        <constraint firstAttribute="bottom" secondItem="EUX-3a-Y6p" secondAttribute="bottom" constant="20" symbolic="YES" id="GhU-5j-5e5"/>
+                                        <constraint firstAttribute="trailing" secondItem="EUX-3a-Y6p" secondAttribute="trailing" constant="20" id="LC0-BX-OLa"/>
+                                        <constraint firstItem="WJB-Ti-bUa" firstAttribute="leading" secondItem="ARr-Gn-KJP" secondAttribute="leading" constant="20" id="WAT-nT-p7A"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="FriendCellLable" destination="EUX-3a-Y6p" id="wfB-Zf-ZSI"/>
+                                    <outlet property="userPicView" destination="WJB-Ti-bUa" id="qrh-or-aNY"/>
                                     <segue destination="ZEm-Bv-ZO1" kind="show" id="ewt-1P-X93"/>
                                 </connections>
                             </tableViewCell>
@@ -203,11 +209,11 @@
             </objects>
             <point key="canvasLocation" x="3594" y="137"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="7Iu-FW-f4z">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WfD-qk-t1p" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="M8b-gD-6cJ"/>
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="M8b-gD-6cJ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="s0e-4b-d9E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -286,11 +292,11 @@
             </objects>
             <point key="canvasLocation" x="2703" y="1093"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="dUv-jP-bmu">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bwN-tl-afm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="BeA-6q-mAd"/>
+                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="BeA-6q-mAd"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Taf-Cy-IyO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -306,4 +312,7 @@
             <point key="canvasLocation" x="895.6521739130435" y="1092.8571428571429"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="userpick" width="120" height="124"/>
+    </resources>
 </document>
