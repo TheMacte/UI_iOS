@@ -10,11 +10,11 @@ import UIKit
 
 class friendsTableTableViewController: UITableViewController {
     
-    let friends = [
-        "Alla",
-        "Boris",
-        "Clara",
-        "Dmitriy"
+    var friends = [
+        friend(name: "Alla", avatar: UIImage(named: "userpick")!, ruName: "Алла"),
+        friend(name: "Boris", avatar: UIImage(named: "userpick")!, ruName: "Борис"),
+        friend(name: "Clara", avatar: UIImage(named: "userpick")!, ruName: "Клара"),
+        friend(name: "Dmitriy", avatar: UIImage(named: "userpick")!, ruName: "Дмитрий")
     ]
     
 /*
@@ -55,7 +55,7 @@ class friendsTableTableViewController: UITableViewController {
             preconditionFailure("Can't create")
         }
         let friendName = friends[indexPath.row]
-        cell.FriendCellLable.text = friendName
+        cell.FriendCellLable.text = friendName.ruName
         
         return cell
     }
@@ -95,14 +95,19 @@ class friendsTableTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "ShowRU", let indexPath = tableView.indexPathForSelectedRow {
+            let friend = friends[indexPath.row].ruName
+            let destinationViewController = segue.destination as? oneFriendController
+            destinationViewController?.friendNameRU = friends[indexPath.row].ruName
+        }
     }
-    */
+    
 
 }

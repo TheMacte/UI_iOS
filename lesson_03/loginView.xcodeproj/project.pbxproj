@@ -20,6 +20,11 @@
 		CD2ED46E23E4AAFE0034A2DD /* friendsTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2ED46D23E4AAFE0034A2DD /* friendsTableTableViewController.swift */; };
 		CD2ED47023E4AFCD0034A2DD /* UserGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2ED46F23E4AFCD0034A2DD /* UserGroup.swift */; };
 		CD2ED47223E4B0130034A2DD /* GlobalSearchGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2ED47123E4B0130034A2DD /* GlobalSearchGroup.swift */; };
+		CD6BB14F23F15D60009637DC /* OneFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6BB14E23F15D60009637DC /* OneFriendCell.swift */; };
+		CD6BB15123F16271009637DC /* oneFriendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6BB15023F16271009637DC /* oneFriendController.swift */; };
+		CD6BB15323F17CAF009637DC /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6BB15223F17CAF009637DC /* GroupCell.swift */; };
+		CD6BB15523F185E0009637DC /* GlobalGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6BB15423F185E0009637DC /* GlobalGroupCell.swift */; };
+		CD6BB15723F18BF6009637DC /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6BB15623F18BF6009637DC /* Users.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +64,11 @@
 		CD2ED46D23E4AAFE0034A2DD /* friendsTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = friendsTableTableViewController.swift; sourceTree = "<group>"; };
 		CD2ED46F23E4AFCD0034A2DD /* UserGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGroup.swift; sourceTree = "<group>"; };
 		CD2ED47123E4B0130034A2DD /* GlobalSearchGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalSearchGroup.swift; sourceTree = "<group>"; };
+		CD6BB14E23F15D60009637DC /* OneFriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneFriendCell.swift; sourceTree = "<group>"; };
+		CD6BB15023F16271009637DC /* oneFriendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oneFriendController.swift; sourceTree = "<group>"; };
+		CD6BB15223F17CAF009637DC /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
+		CD6BB15423F185E0009637DC /* GlobalGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalGroupCell.swift; sourceTree = "<group>"; };
+		CD6BB15623F18BF6009637DC /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +123,11 @@
 				37001D1E23E0A37E00DA889E /* SceneDelegate.swift */,
 				37001D2023E0A37E00DA889E /* ViewController.swift */,
 				37001D2223E0A37E00DA889E /* Main.storyboard */,
+				CD6BB15623F18BF6009637DC /* Users.swift */,
+				CD6BB15423F185E0009637DC /* GlobalGroupCell.swift */,
+				CD6BB15223F17CAF009637DC /* GroupCell.swift */,
+				CD6BB15023F16271009637DC /* oneFriendController.swift */,
+				CD6BB14E23F15D60009637DC /* OneFriendCell.swift */,
 				37E1BB2823F0995E00924875 /* FriendsCell.swift */,
 				CD2ED47123E4B0130034A2DD /* GlobalSearchGroup.swift */,
 				CD2ED46F23E4AFCD0034A2DD /* UserGroup.swift */,
@@ -276,12 +291,17 @@
 			files = (
 				37001D2123E0A37E00DA889E /* ViewController.swift in Sources */,
 				CD2ED46E23E4AAFE0034A2DD /* friendsTableTableViewController.swift in Sources */,
+				CD6BB15523F185E0009637DC /* GlobalGroupCell.swift in Sources */,
+				CD6BB15323F17CAF009637DC /* GroupCell.swift in Sources */,
 				CD2ED46C23E4A7BC0034A2DD /* firstTabBarViewController.swift in Sources */,
 				37001D1D23E0A37E00DA889E /* AppDelegate.swift in Sources */,
 				CD2ED47223E4B0130034A2DD /* GlobalSearchGroup.swift in Sources */,
 				CD2ED47023E4AFCD0034A2DD /* UserGroup.swift in Sources */,
 				37001D1F23E0A37E00DA889E /* SceneDelegate.swift in Sources */,
+				CD6BB15723F18BF6009637DC /* Users.swift in Sources */,
 				37E1BB2923F0995E00924875 /* FriendsCell.swift in Sources */,
+				CD6BB15123F16271009637DC /* oneFriendController.swift in Sources */,
+				CD6BB14F23F15D60009637DC /* OneFriendCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
