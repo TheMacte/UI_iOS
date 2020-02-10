@@ -11,10 +11,10 @@ import UIKit
 class friendsTableTableViewController: UITableViewController {
     
     var friends = [
-        friend(name: "Alla", avatar: UIImage(named: "userpick")!, ruName: "Алла"),
-        friend(name: "Boris", avatar: UIImage(named: "userpick")!, ruName: "Борис"),
-        friend(name: "Clara", avatar: UIImage(named: "userpick")!, ruName: "Клара"),
-        friend(name: "Dmitriy", avatar: UIImage(named: "userpick")!, ruName: "Дмитрий")
+        friend(name: "Alla", avatar: UIImage(named: "Alla")!, ruName: "Алла"),
+        friend(name: "Boris", avatar: UIImage(named: "Boris")!, ruName: "Борис"),
+        friend(name: "Clara", avatar: UIImage(named: "Clara")!, ruName: "Клара"),
+        friend(name: "Dmitriy", avatar: UIImage(named: "Dmitriy")!, ruName: "Дмитрий")
     ]
     
 /*
@@ -55,6 +55,7 @@ class friendsTableTableViewController: UITableViewController {
             preconditionFailure("Can't create")
         }
         let friendName = friends[indexPath.row]
+        
         cell.FriendCellLable.text = friendName.ruName
         
         return cell

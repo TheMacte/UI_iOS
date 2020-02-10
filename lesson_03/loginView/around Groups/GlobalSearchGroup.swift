@@ -1,5 +1,5 @@
 //
-//  UserGroup.swift
+//  GlobalSearchGroup.swift
 //  loginView
 //
 //  Created by Олег Дмитриев on 31.01.2020.
@@ -8,41 +8,21 @@
 
 import UIKit
 
-class UserGroup: UITableViewController {
-
-    var grouper = [String]()
-    
+class GlobalSearchGroup: UITableViewController {
     /*
-    var grouper = [
-            "scool",
-            "worck",
-            "iOS friends",
-            "other"
+    var globalGroup = [
+            "People",
+            "Russian",
+            "Men",
+            "Women"
         ]
     */
-    @IBAction func addGroup(segue: UIStoryboardSegue) {
-        // Проверяем идентификатор, чтобы убедиться, что это нужный переход
-        if segue.identifier == "addGroup" {
-        // Получаем ссылку на контроллер, с которого осуществлен переход
-            guard let GlobalSearchGroup = segue.source as? GlobalSearchGroup else { return }
-            
-        // Получаем индекс выделенной ячейки
-            if let indexPath = GlobalSearchGroup.tableView.indexPathForSelectedRow {
-        // Получаем город по индексу
-                let group = GlobalSearchGroup.globalGroup[indexPath.row]
-        // Проверяем, что такого города нет в списке
-        if !grouper.contains(group) {
-                
-            // Добавляем город в список выбранных городов
-                    grouper.append(group)
-            // Обновляем таблицу
-                    tableView.reloadData()
-                }
-            }
-        }
-
-    }
-
+    var globalGroup = [
+        Groups(name: "People", avatar: UIImage(named: "Clara")!, ruName: "Люди"),
+        Groups(name: "Russian", avatar: UIImage(named: "Clara")!, ruName: "Русские"),
+        Groups(name: "Men", avatar: UIImage(named: "Clara")!, ruName: "Мужчины"),
+        Groups(name: "Women", avatar: UIImage(named: "Clara")!, ruName: "Женщины")
+    ]
     /*
         @IBOutlet override var tableView: UITableView! {
             didSet {
@@ -51,6 +31,7 @@ class UserGroup: UITableViewController {
             }
         }
      */
+    
 
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -72,16 +53,17 @@ class UserGroup: UITableViewController {
         
 
         override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return grouper.count
+            return globalGroup.count
         }
 
         
         override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "GroupCell", for: indexPath) as? GroupCell else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "GlobalGroupCell", for: indexPath) as? GlobalGroupCell else {
                 preconditionFailure("Can't create")
             }
-            let groupName = grouper[indexPath.row]
-            cell.GroupCellLable.text = groupName
+            let globalGroupList = globalGroup[indexPath.row]
+            
+            cell.GlobalSearchCellLable.text = globalGroupList.ruName
             
             return cell
         }
@@ -94,18 +76,17 @@ class UserGroup: UITableViewController {
         }
         */
 
-        
+        /*
         // Override to support editing the table view.
-        override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt group: IndexPath) {
+        override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
             if editingStyle == .delete {
                 // Delete the row from the data source
-                grouper.remove(at: group.row)
-                tableView.deleteRows(at: [group], with: .fade)
-           // } else if editingStyle == .insert {
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            } else if editingStyle == .insert {
                 // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-            //}
+            }
         }
-        
+        */
 
         /*
         // Override to support rearranging the table view.
@@ -133,4 +114,3 @@ class UserGroup: UITableViewController {
         */
 
     }
-}

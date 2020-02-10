@@ -1,5 +1,5 @@
 //
-//  GlobalSearchGroup.swift
+//  UserGroup.swift
 //  loginView
 //
 //  Created by Олег Дмитриев on 31.01.2020.
@@ -8,15 +8,41 @@
 
 import UIKit
 
-class GlobalSearchGroup: UITableViewController {
+class UserGroup: UITableViewController {
 
-    var globalGroup = [
-            "People",
-            "Russian",
-            "Men",
-            "Women"
+    var grouper = [String]()
+    
+    /*
+    var grouper = [
+            "scool",
+            "worck",
+            "iOS friends",
+            "other"
         ]
-        
+    */
+    @IBAction func addGroup(segue: UIStoryboardSegue) {
+        // Проверяем идентификатор, чтобы убедиться, что это нужный переход
+        if segue.identifier == "addGroup" {
+        // Получаем ссылку на контроллер, с которого осуществлен переход
+            guard let GlobalSearchGroup = segue.source as? GlobalSearchGroup else { return }
+            
+        // Получаем индекс выделенной ячейки
+            if let indexPath = GlobalSearchGroup.tableView.indexPathForSelectedRow {
+        // Получаем город по индексу
+                let group = GlobalSearchGroup.globalGroup[indexPath.row].ruName
+        // Проверяем, что такого города нет в списке
+                if !grouper.contains(group) {
+                
+            // Добавляем город в список выбранных городов
+                    grouper.append(group)
+            // Обновляем таблицу
+                    tableView.reloadData()
+                }
+            }
+        }
+
+    }
+
     /*
         @IBOutlet override var tableView: UITableView! {
             didSet {
@@ -25,7 +51,6 @@ class GlobalSearchGroup: UITableViewController {
             }
         }
      */
-    
 
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -47,17 +72,16 @@ class GlobalSearchGroup: UITableViewController {
         
 
         override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return globalGroup.count
+            return grouper.count
         }
 
         
         override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "GlobalGroupCell", for: indexPath) as? GlobalGroupCell else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "GroupCell", for: indexPath) as? GroupCell else {
                 preconditionFailure("Can't create")
             }
-            let globalGroupList = globalGroup[indexPath.row]
-            
-            cell.GlobalSearchCellLable.text = globalGroupList
+            let groupName = grouper[indexPath.row]
+            cell.GroupCellLable.text = groupName
             
             return cell
         }
@@ -70,17 +94,18 @@ class GlobalSearchGroup: UITableViewController {
         }
         */
 
-        /*
+        
         // Override to support editing the table view.
-        override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt group: IndexPath) {
             if editingStyle == .delete {
                 // Delete the row from the data source
-                tableView.deleteRows(at: [indexPath], with: .fade)
-            } else if editingStyle == .insert {
+                grouper.remove(at: group.row)
+                tableView.deleteRows(at: [group], with: .fade)
+           // } else if editingStyle == .insert {
                 // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-            }
+            //}
         }
-        */
+        
 
         /*
         // Override to support rearranging the table view.
@@ -108,3 +133,4 @@ class GlobalSearchGroup: UITableViewController {
         */
 
     }
+}
