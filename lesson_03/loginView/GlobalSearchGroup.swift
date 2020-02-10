@@ -25,6 +25,7 @@ class GlobalSearchGroup: UITableViewController {
             }
         }
      */
+    
 
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -55,6 +56,7 @@ class GlobalSearchGroup: UITableViewController {
                 preconditionFailure("Can't create")
             }
             let globalGroupList = globalGroup[indexPath.row]
+            
             cell.GlobalSearchCellLable.text = globalGroupList
             
             return cell

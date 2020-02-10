@@ -131,14 +131,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationWidth="10" reuseIdentifier="FriendsCell" id="vwQ-E1-QtA" customClass="FriendsCell" customModule="loginView" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="61"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="61.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vwQ-E1-QtA" id="ARr-Gn-KJP">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="61"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="61.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUX-3a-Y6p">
-                                            <rect key="frame" x="108" y="20" width="286" height="21"/>
+                                            <rect key="frame" x="108" y="20" width="286" height="21.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -177,7 +177,6 @@
         <!--One Friend Controller-->
         <scene sceneID="OUv-IL-IQR">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yDO-Ce-v4n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <collectionViewController id="ZEm-Bv-ZO1" customClass="oneFriendController" customModule="loginView" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="wOu-rL-huT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -236,6 +235,7 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="veW-Bv-PJr"/>
                 </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yDO-Ce-v4n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3592.753623188406" y="136.60714285714286"/>
         </scene>
@@ -324,6 +324,8 @@
         <!--Global Search Group-->
         <scene sceneID="C7t-bW-d25">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tgj-jb-no8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="8dH-Sm-5gM" userLabel="Exit" sceneMemberID="exit"/>
                 <tableViewController id="odK-aS-z5o" customClass="GlobalSearchGroup" customModule="loginView" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3FM-Yf-0Up">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -363,6 +365,7 @@
                                 <connections>
                                     <outlet property="GlobalSearchCellLable" destination="8aC-V3-C8h" id="M98-9D-VDR"/>
                                     <outlet property="GlobalSearchGroupPicView" destination="CZf-3A-VWJ" id="DlR-2e-A5Y"/>
+                                    <segue destination="8dH-Sm-5gM" kind="unwind" identifier="addGroup" unwindAction="addGroupWithSegue:" id="bEI-aQ-H24"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -373,7 +376,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="CrF-kI-NJ1"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tgj-jb-no8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2702.898550724638" y="1092.8571428571429"/>
         </scene>

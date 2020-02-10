@@ -10,13 +10,39 @@ import UIKit
 
 class UserGroup: UITableViewController {
 
+    var grouper = [String]()
+    
+    /*
     var grouper = [
             "scool",
             "worck",
             "iOS friends",
             "other"
         ]
-        
+    */
+    @IBAction func addGroup(segue: UIStoryboardSegue) {
+        // Проверяем идентификатор, чтобы убедиться, что это нужный переход
+        if segue.identifier == "addGroup" {
+        // Получаем ссылку на контроллер, с которого осуществлен переход
+            guard let GlobalSearchGroup = segue.source as? GlobalSearchGroup else { return }
+            
+        // Получаем индекс выделенной ячейки
+            if let indexPath = GlobalSearchGroup.tableView.indexPathForSelectedRow {
+        // Получаем город по индексу
+                let group = GlobalSearchGroup.globalGroup[indexPath.row]
+        // Проверяем, что такого города нет в списке
+        if !grouper.contains(group) {
+                
+            // Добавляем город в список выбранных городов
+                    grouper.append(group)
+            // Обновляем таблицу
+                    tableView.reloadData()
+                }
+            }
+        }
+
+    }
+
     /*
         @IBOutlet override var tableView: UITableView! {
             didSet {
