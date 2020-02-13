@@ -11,7 +11,7 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class oneFriendController: UICollectionViewController {
-    
+        
     var friendNameRU: String?
 
     override func viewDidLoad() {
@@ -22,10 +22,15 @@ class oneFriendController: UICollectionViewController {
 
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        
 
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
     
     // MARK: - Navigation
 
@@ -57,7 +62,7 @@ class oneFriendController: UICollectionViewController {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OneFriendCell", for: indexPath) as? OneFriendCell else {
             preconditionFailure("Can't create")
         }
-    
+        
         // Configure the cell
         cell.userNameOfOneUser.text = friendNameRU!
         
@@ -95,4 +100,7 @@ class oneFriendController: UICollectionViewController {
     }
     */
 
+
 }
+
+
