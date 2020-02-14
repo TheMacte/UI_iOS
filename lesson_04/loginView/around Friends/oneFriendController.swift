@@ -22,8 +22,7 @@ class oneFriendController: UICollectionViewController {
 
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        
-
+       
         // Do any additional setup after loading the view.
     }
 
@@ -68,6 +67,8 @@ class oneFriendController: UICollectionViewController {
         
         return cell
     }
+    
+    
 
     // MARK: UICollectionViewDelegate
 

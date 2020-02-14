@@ -8,17 +8,28 @@
 
 import UIKit
 
+var countOfLike:Int = 10
+
 class OneFriendCell: UICollectionViewCell {
     @IBOutlet var userFaceOfoneUser: UIImageView!
     @IBOutlet var userNameOfOneUser: UILabel!
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var likeView: LikeView!
-    
-    
+    @IBOutlet weak var likeCount: UILabel!
+    @IBOutlet weak var likeView1: LikeView1!
     
     @IBAction func iLikeItButton(_ sender: Any) {
-        heartColor = heartColor == UIColor.red ? UIColor.green : UIColor.red
+        if showStatus == false {
+            showStatus = true
+            countOfLike += 1
+            likeCount.textColor = .green
+        } else {
+            showStatus = false
+            countOfLike -= 1
+            likeCount.textColor = .none
+        }
         likeView.setNeedsDisplay()
+        likeCount.text = String(countOfLike)
     }
     
     @IBInspectable var color:UIColor = .red
@@ -29,6 +40,8 @@ class OneFriendCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        
         
         //userFaceOfoneUser.layer.masksToBounds = true
         userFaceOfoneUser.layer.cornerRadius = 50 // Скругление
@@ -41,6 +54,8 @@ class OneFriendCell: UICollectionViewCell {
         backView.layer.shadowOpacity = opacity
         backView.layer.shadowRadius = radius
         backView.layer.shadowOffset = CGSize.zero
+        
+        likeCount.text = String(countOfLike)
         
 
     }

@@ -131,14 +131,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationWidth="10" reuseIdentifier="FriendsCell" id="vwQ-E1-QtA" customClass="FriendsCell" customModule="loginView" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="61"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="61.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vwQ-E1-QtA" id="ARr-Gn-KJP">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="61"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="61.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUX-3a-Y6p">
-                                            <rect key="frame" x="108" y="20" width="286" height="21"/>
+                                            <rect key="frame" x="108" y="20" width="286" height="21.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -232,6 +232,29 @@
                                                 <action selector="iLikeItButton:" destination="rSc-KA-9CA" eventType="touchUpInside" id="qeX-q6-vWb"/>
                                             </connections>
                                         </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="likeCount" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LzD-H7-pZi">
+                                            <rect key="frame" x="265" y="248" width="42" height="0.0"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="42" id="wEI-cH-NAu"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" restorationIdentifier="likeView1" translatesAutoresizingMaskIntoConstraints="NO" id="fh1-js-YF7" customClass="LikeView1" customModule="loginView" customModuleProvider="target">
+                                            <rect key="frame" x="66" y="237.5" width="71" height="21"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="71" id="Hsd-rd-zKd"/>
+                                                <constraint firstAttribute="height" constant="21" id="eZJ-mU-1yj"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" restorationIdentifier="likeCount1" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="567-EX-tsM" customClass="LikeCount1" customModule="loginView" customModuleProvider="target">
+                                            <rect key="frame" x="103" y="238" width="34" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -242,8 +265,14 @@
                                         <constraint firstItem="DFa-yW-qLr" firstAttribute="top" secondItem="ZO2-bH-sps" secondAttribute="top" constant="123.5" id="W2d-tq-zMB"/>
                                         <constraint firstItem="fXA-sH-Kdb" firstAttribute="top" secondItem="DFa-yW-qLr" secondAttribute="bottom" constant="-34.5" id="aMY-gD-sFj"/>
                                         <constraint firstItem="DFa-yW-qLr" firstAttribute="centerX" secondItem="ZO2-bH-sps" secondAttribute="centerX" id="fAW-wb-Pla"/>
+                                        <constraint firstItem="LzD-H7-pZi" firstAttribute="centerY" secondItem="3sv-bj-5qF" secondAttribute="centerY" id="fQM-ZN-8h6"/>
                                         <constraint firstItem="3sv-bj-5qF" firstAttribute="firstBaseline" secondItem="DFa-yW-qLr" secondAttribute="baseline" constant="30" id="gIg-Po-O6O"/>
                                         <constraint firstItem="fXA-sH-Kdb" firstAttribute="leading" secondItem="DFa-yW-qLr" secondAttribute="trailing" constant="-43" id="h3m-i9-oEO"/>
+                                        <constraint firstItem="LzD-H7-pZi" firstAttribute="leading" secondItem="3sv-bj-5qF" secondAttribute="trailing" constant="8" id="iPh-ho-ezz"/>
+                                        <constraint firstItem="3sv-bj-5qF" firstAttribute="leading" secondItem="fh1-js-YF7" secondAttribute="trailing" constant="20" id="iwG-U4-nyh"/>
+                                        <constraint firstAttribute="trailing" secondItem="567-EX-tsM" secondAttribute="trailing" constant="277" id="j6O-LL-vS8"/>
+                                        <constraint firstItem="fh1-js-YF7" firstAttribute="centerY" secondItem="3sv-bj-5qF" secondAttribute="centerY" id="o0Q-FK-NDH"/>
+                                        <constraint firstItem="567-EX-tsM" firstAttribute="centerY" secondItem="fh1-js-YF7" secondAttribute="centerY" id="oaR-db-ZRO"/>
                                         <constraint firstAttribute="bottom" secondItem="DFa-yW-qLr" secondAttribute="bottom" constant="123.5" id="qeP-w1-4FF"/>
                                         <constraint firstItem="DFa-yW-qLr" firstAttribute="centerY" secondItem="ZO2-bH-sps" secondAttribute="centerY" id="tku-gR-ca1"/>
                                         <constraint firstItem="A0b-hJ-Ooi" firstAttribute="centerX" secondItem="DFa-yW-qLr" secondAttribute="centerX" id="vCj-kT-ySa"/>
@@ -264,7 +293,9 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="backView" destination="ZGs-1M-I2C" id="v9c-m1-n3I"/>
+                                    <outlet property="likeCount" destination="LzD-H7-pZi" id="pC0-Mv-J9J"/>
                                     <outlet property="likeView" destination="fXA-sH-Kdb" id="dHT-85-0gX"/>
+                                    <outlet property="likeView1" destination="fh1-js-YF7" id="hRA-yI-Zlw"/>
                                     <outlet property="userFaceOfoneUser" destination="DFa-yW-qLr" id="uVv-0g-GnM"/>
                                     <outlet property="userNameOfOneUser" destination="A0b-hJ-Ooi" id="YEa-nO-iEk"/>
                                 </connections>

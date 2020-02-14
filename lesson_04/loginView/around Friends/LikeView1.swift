@@ -8,12 +8,9 @@
 
 import UIKit
 
-    var heartColor = UIColor.green
-    var showStatus: Bool = false
-
-class LikeView: UIView {
+class LikeView1: UIView {
     
-    func line() -> UIBezierPath {
+    func line() {
         let heartIcon = UIBezierPath()
         heartIcon.move(to: CGPoint(x:4, y:0))
         heartIcon.addLine(to: CGPoint(x:6, y:0))
@@ -26,48 +23,42 @@ class LikeView: UIView {
         heartIcon.addLine(to: CGPoint(x:0, y:8))
         heartIcon.addLine(to: CGPoint(x:0, y:4))
         heartIcon.close()
-        //heartIcon.stroke()
-        return heartIcon
+        heartIcon.stroke()
     }
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         guard let context = UIGraphicsGetCurrentContext() else {return}
         context.setFillColor(heartColor.cgColor)
-        //context.setFillColor(UIColor.red.cgColor)
-        //context.fill(self)
         context.setStrokeColor(heartColor.cgColor)
-        
-        
-        
-        //line()
-        showIcon(status:showStatus)
-    }
-    func showIcon(status:Bool){
-        let heartIcon = line()
-        if status == true {
-            heartIcon.stroke()
-        }
+        line()
     }
     
+    
+
     /*
-     Это при нажатии на само вью, а надо оказывается через кнопку.
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
             let currentPoint = touch.location(in: self)
             // do something with your currentPoint
-            heartColor = heartColor == UIColor.red ? UIColor.green : UIColor.red
+            if showStatus == false {
+                showStatus = true
+                countOfLike += 1
+                //likeCount.textColor = .green
+                
+            } else {
+                showStatus = false
+                countOfLike -= 1
+                //likeCount.textColor = .none
+            }
+            
+            //likeView.setNeedsDisplay()
+            //likeCount.text = String(countOfLike)
+            
+        heartColor = heartColor == UIColor.red ? UIColor.green : UIColor.red
            self.setNeedsDisplay()
         }
     }
-     */
-    
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
+ */
+     
 }
