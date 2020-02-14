@@ -11,7 +11,7 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class oneFriendController: UICollectionViewController {
-        
+    
     var friendNameRU: String?
 
     override func viewDidLoad() {

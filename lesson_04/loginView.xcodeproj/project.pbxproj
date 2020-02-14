@@ -28,6 +28,7 @@
 		CD6FCF6D23F5CFFF001384E4 /* FaceImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FCF6C23F5CFFF001384E4 /* FaceImageView.swift */; };
 		CD6FCF6F23F5D022001384E4 /* UnderFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FCF6E23F5D022001384E4 /* UnderFaceView.swift */; };
 		CD6FCF7323F5E774001384E4 /* TestView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FCF7223F5E774001384E4 /* TestView2.swift */; };
+		CD83B60623F693BC0021E950 /* LikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD83B60523F693BC0021E950 /* LikeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		CD6FCF6C23F5CFFF001384E4 /* FaceImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceImageView.swift; sourceTree = "<group>"; };
 		CD6FCF6E23F5D022001384E4 /* UnderFaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderFaceView.swift; sourceTree = "<group>"; };
 		CD6FCF7223F5E774001384E4 /* TestView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView2.swift; sourceTree = "<group>"; };
+		CD83B60523F693BC0021E950 /* LikeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 				CD6FCF6C23F5CFFF001384E4 /* FaceImageView.swift */,
 				37E1BB2823F0995E00924875 /* FriendsCell.swift */,
 				CD6FCF7223F5E774001384E4 /* TestView2.swift */,
+				CD83B60523F693BC0021E950 /* LikeView.swift */,
 				CD6FCF6E23F5D022001384E4 /* UnderFaceView.swift */,
 				CD2ED46D23E4AAFE0034A2DD /* friendsTableTableViewController.swift */,
 			);
@@ -335,6 +338,7 @@
 				37001D1F23E0A37E00DA889E /* SceneDelegate.swift in Sources */,
 				CD6BB15723F18BF6009637DC /* structs.swift in Sources */,
 				37E1BB2923F0995E00924875 /* FriendsCell.swift in Sources */,
+				CD83B60623F693BC0021E950 /* LikeView.swift in Sources */,
 				CD6FCF6F23F5D022001384E4 /* UnderFaceView.swift in Sources */,
 				CD6BB15123F16271009637DC /* oneFriendController.swift in Sources */,
 				CD6BB14F23F15D60009637DC /* OneFriendCell.swift in Sources */,

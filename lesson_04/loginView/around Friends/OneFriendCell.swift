@@ -12,10 +12,19 @@ class OneFriendCell: UICollectionViewCell {
     @IBOutlet var userFaceOfoneUser: UIImageView!
     @IBOutlet var userNameOfOneUser: UILabel!
     @IBOutlet weak var backView: UIView!
+    @IBOutlet weak var likeView: LikeView!
+    
+    
+    
+    @IBAction func iLikeItButton(_ sender: Any) {
+        heartColor = heartColor == UIColor.red ? UIColor.green : UIColor.red
+        likeView.setNeedsDisplay()
+    }
     
     @IBInspectable var color:UIColor = .red
     @IBInspectable var radius:CGFloat = 18
     @IBInspectable var opacity:Float = 0.5
+
 
     
     override func awakeFromNib() {
