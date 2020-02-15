@@ -8,13 +8,13 @@
 
 import UIKit
 
-class friendsTableTableViewController: UITableViewController {
+class FriendsTableTableViewController: UITableViewController {
     
     var friends = [
-        friend(name: "Alla", avatar: UIImage(named: "Alla")!, ruName: "Алла"),
-        friend(name: "Boris", avatar: UIImage(named: "Boris")!, ruName: "Борис"),
-        friend(name: "Clara", avatar: UIImage(named: "Clara")!, ruName: "Клара"),
-        friend(name: "Dmitriy", avatar: UIImage(named: "Dmitriy")!, ruName: "Дмитрий")
+        Friend(name: "Alla", avatar: UIImage(named: "Alla")!, ruName: "Алла"),
+        Friend(name: "Boris", avatar: UIImage(named: "Boris")!, ruName: "Борис"),
+        Friend(name: "Clara", avatar: UIImage(named: "Clara")!, ruName: "Клара"),
+        Friend(name: "Dmitriy", avatar: UIImage(named: "Dmitriy")!, ruName: "Дмитрий")
     ]
     
 /*
@@ -105,7 +105,7 @@ class friendsTableTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
         if segue.identifier == "ShowRU", let indexPath = tableView.indexPathForSelectedRow {
             let friend = friends[indexPath.row].ruName
-            let destinationViewController = segue.destination as? oneFriendController
+            let destinationViewController = segue.destination as? OneFriendController
             destinationViewController?.friendNameRU = friends[indexPath.row].ruName
         }
     }

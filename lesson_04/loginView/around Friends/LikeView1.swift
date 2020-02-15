@@ -8,6 +8,8 @@
 
 import UIKit
 
+var touchedLike1Btn: Bool = false
+
 class LikeView1: UIView {
     
     func line() {
@@ -33,7 +35,6 @@ class LikeView1: UIView {
         context.setStrokeColor(heartColor.cgColor)
         line()
     }
-    
     
 
     /*

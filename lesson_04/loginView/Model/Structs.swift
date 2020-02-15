@@ -8,19 +8,19 @@
 
 import UIKit
 
-protocol nameOf {
+protocol NameOf {
     var name: String { get set }
     var avatar: UIImage { get set }
     var ruName: String { get set }
 }
 
-struct friend: nameOf {
+struct Friend: NameOf {
     var name: String
     var avatar: UIImage
     var ruName: String
 }
 
-struct Groups: nameOf {
+struct Groups: NameOf {
     var name: String
     var avatar: UIImage
     var ruName: String

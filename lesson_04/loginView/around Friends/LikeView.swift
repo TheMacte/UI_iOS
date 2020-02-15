@@ -37,9 +37,6 @@ class LikeView: UIView {
         //context.setFillColor(UIColor.red.cgColor)
         //context.fill(self)
         context.setStrokeColor(heartColor.cgColor)
-        
-        
-        
         //line()
         showIcon(status:showStatus)
     }

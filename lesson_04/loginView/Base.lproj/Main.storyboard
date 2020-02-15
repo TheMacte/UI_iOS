@@ -105,7 +105,7 @@
         <!--First Tab Bar View Controller-->
         <scene sceneID="ZS3-Kb-4QA">
             <objects>
-                <tabBarController modalPresentationStyle="fullScreen" id="wzX-n1-DEb" customClass="firstTabBarViewController" customModule="loginView" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController modalPresentationStyle="fullScreen" id="wzX-n1-DEb" customClass="FirstTabBarViewController" customModule="loginView" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Qsx-0U-F8S"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="a8T-4R-Yi3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -124,21 +124,21 @@
         <!--Friends-->
         <scene sceneID="b4W-Uz-DvV">
             <objects>
-                <tableViewController title="Friends" id="b7D-ap-88T" customClass="friendsTableTableViewController" customModule="loginView" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Friends" id="b7D-ap-88T" customClass="FriendsTableTableViewController" customModule="loginView" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vDR-d2-OtR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationWidth="10" reuseIdentifier="FriendsCell" id="vwQ-E1-QtA" customClass="FriendsCell" customModule="loginView" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="61.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="61"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vwQ-E1-QtA" id="ARr-Gn-KJP">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="61.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="61"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUX-3a-Y6p">
-                                            <rect key="frame" x="108" y="20" width="286" height="21.5"/>
+                                            <rect key="frame" x="108" y="20" width="286" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -177,7 +177,7 @@
         <!--One Friend Controller-->
         <scene sceneID="OUv-IL-IQR">
             <objects>
-                <collectionViewController id="ZEm-Bv-ZO1" customClass="oneFriendController" customModule="loginView" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="ZEm-Bv-ZO1" customClass="OneFriendController" customModule="loginView" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="wOu-rL-huT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -294,6 +294,7 @@
                                 <connections>
                                     <outlet property="backView" destination="ZGs-1M-I2C" id="v9c-m1-n3I"/>
                                     <outlet property="likeCount" destination="LzD-H7-pZi" id="pC0-Mv-J9J"/>
+                                    <outlet property="likeCount1" destination="567-EX-tsM" id="Ldc-gr-Fin"/>
                                     <outlet property="likeView" destination="fXA-sH-Kdb" id="dHT-85-0gX"/>
                                     <outlet property="likeView1" destination="fh1-js-YF7" id="hRA-yI-Zlw"/>
                                     <outlet property="userFaceOfoneUser" destination="DFa-yW-qLr" id="uVv-0g-GnM"/>
