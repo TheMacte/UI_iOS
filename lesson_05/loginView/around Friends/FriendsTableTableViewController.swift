@@ -10,6 +10,7 @@ import UIKit
 
 class FriendsTableTableViewController: UITableViewController {
     
+    @IBOutlet var searchFrienda: UITableView!
     
     var friends = [
         Friend(name: "Alla", avatar: UIImage(named: "Alla")!, ruName: "Алла"),
@@ -29,23 +30,27 @@ class FriendsTableTableViewController: UITableViewController {
         Friend(name: "Cvetlana", avatar: UIImage(named: "Clara")!, ruName: "Светлана"),
         Friend(name: "Dantes", avatar: UIImage(named: "Dmitriy")!, ruName: "Дантес")
     ]
-    
 
+    
+    
+    lazy var friendsForSort:[String] = {
+        var teml:[String] = []
+        friends.forEach { friend in
+            teml.append(friend.ruName)
+        }
+        return teml
+    }()
+    
+    var filtrenFriends: [String] = [String]()
     
     lazy var selections:[[String]] = {
         
         // Обрабатываю свои входные данные
-        var friendsForSort:[String] = {
-            var teml:[String] = []
-            friends.forEach { friend in
-                teml.append(friend.ruName)
-            }
-            return teml
-        }()
+
         
         //далее как на урпоке
         var dict = [[String]]()
-        return friendsForSort.sorted().reduce([[String]]()) { (result, element) -> [[String]] in
+        return filtrenFriends.sorted().reduce([[String]]()) { (result, element) -> [[String]] in
             guard var last = result.last else { return [[element]] }
             var collection = result
             if element.first == result.last?.first?.first {
@@ -59,10 +64,11 @@ class FriendsTableTableViewController: UITableViewController {
         
         return dict
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "FriendCellHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "headerView")
+        filtrenFriends = friendsForSort
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -83,10 +89,10 @@ class FriendsTableTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsCell", for: indexPath) as? FriendsCell else {
+        guard var cell = tableView.dequeueReusableCell(withIdentifier: "FriendsCell", for: indexPath) as? FriendsCell else {
             preconditionFailure("Can't create")
         }
-        let friendName = selections[indexPath.section][indexPath.row]
+        var friendName = selections[indexPath.section][indexPath.row]
         
         cell.FriendCellLable.text = friendName
         
@@ -99,5 +105,33 @@ class FriendsTableTableViewController: UITableViewController {
             let destinationViewController = segue.destination as? OneFriendController
             destinationViewController?.friendNameRU = friends[indexPath.row].ruName
         }
+    }
+}
+
+extension FriendsTableTableViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filtrenFriends = friendsForSort.filter { $0.range(of: searchText, options: .caseInsensitive) != nil }
+        
+        selections = {
+            //далее как на урпоке
+            var dict = [[String]]()
+            return filtrenFriends.sorted().reduce([[String]]()) { (result, element) -> [[String]] in
+                guard var last = result.last else { return [[element]] }
+                var collection = result
+                if element.first == result.last?.first?.first {
+                    last.append(element)
+                    collection[collection.count - 1] = last
+                } else {
+                    collection.append([element])
+                }
+                return collection
+            }
+            
+            return dict
+        }()
+        
+        
+        tableView.reloadData()
+        print(filtrenFriends)
     }
 }
