@@ -111,6 +111,7 @@ class FriendsTableTableViewController: UITableViewController {
 extension FriendsTableTableViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filtrenFriends = friendsForSort.filter { $0.range(of: searchText, options: .caseInsensitive) != nil }
+        if filtrenFriends.count == 0 {filtrenFriends = friendsForSort}
         
         selections = {
             //далее как на урпоке
@@ -129,7 +130,6 @@ extension FriendsTableTableViewController: UISearchBarDelegate {
             
             return dict
         }()
-        
         
         tableView.reloadData()
         print(filtrenFriends)
