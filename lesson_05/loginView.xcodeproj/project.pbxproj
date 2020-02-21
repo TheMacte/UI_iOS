@@ -17,6 +17,8 @@
 		37001D3F23E0A37F00DA889E /* loginViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37001D3E23E0A37F00DA889E /* loginViewUITests.swift */; };
 		374452DC23F7370600584375 /* LikeView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374452DB23F7370600584375 /* LikeView1.swift */; };
 		374452DE23F73B7E00584375 /* LikeCount1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374452DD23F73B7E00584375 /* LikeCount1.swift */; };
+		37A0D4832400776600A8B53D /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A0D4822400776600A8B53D /* NewsTableViewController.swift */; };
+		37A0D4852400779800A8B53D /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A0D4842400779800A8B53D /* NewsCell.swift */; };
 		37E1BB2923F0995E00924875 /* FriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E1BB2823F0995E00924875 /* FriendsCell.swift */; };
 		CD2ED46C23E4A7BC0034A2DD /* FirstTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2ED46B23E4A7BC0034A2DD /* FirstTabBarViewController.swift */; };
 		CD2ED46E23E4AAFE0034A2DD /* FriendsTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2ED46D23E4AAFE0034A2DD /* FriendsTableTableViewController.swift */; };
@@ -33,8 +35,6 @@
 		CD6FCF6F23F5D022001384E4 /* UnderFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FCF6E23F5D022001384E4 /* UnderFaceView.swift */; };
 		CD6FCF7323F5E774001384E4 /* TestView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FCF7223F5E774001384E4 /* TestView2.swift */; };
 		CD83B60623F693BC0021E950 /* LikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD83B60523F693BC0021E950 /* LikeView.swift */; };
-		CD9B594723FFD4030079CE55 /* NewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9B594623FFD4030079CE55 /* NewsController.swift */; };
-		CD9B594923FFD6C80079CE55 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9B594823FFD6C80079CE55 /* NewsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +71,8 @@
 		37001D4023E0A37F00DA889E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		374452DB23F7370600584375 /* LikeView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeView1.swift; sourceTree = "<group>"; };
 		374452DD23F73B7E00584375 /* LikeCount1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeCount1.swift; sourceTree = "<group>"; };
+		37A0D4822400776600A8B53D /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		37A0D4842400779800A8B53D /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		37E1BB2823F0995E00924875 /* FriendsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCell.swift; sourceTree = "<group>"; };
 		CD2ED46B23E4A7BC0034A2DD /* FirstTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTabBarViewController.swift; sourceTree = "<group>"; };
 		CD2ED46D23E4AAFE0034A2DD /* FriendsTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableTableViewController.swift; sourceTree = "<group>"; };
@@ -87,8 +89,6 @@
 		CD6FCF6E23F5D022001384E4 /* UnderFaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderFaceView.swift; sourceTree = "<group>"; };
 		CD6FCF7223F5E774001384E4 /* TestView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView2.swift; sourceTree = "<group>"; };
 		CD83B60523F693BC0021E950 /* LikeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeView.swift; sourceTree = "<group>"; };
-		CD9B594623FFD4030079CE55 /* NewsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsController.swift; sourceTree = "<group>"; };
-		CD9B594823FFD6C80079CE55 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,9 +142,10 @@
 				37001D1C23E0A37E00DA889E /* AppDelegate.swift */,
 				37001D1E23E0A37E00DA889E /* SceneDelegate.swift */,
 				37001D2023E0A37E00DA889E /* ViewController.swift */,
+				37A0D4812400645700A8B53D /* New Group */,
 				37001D2223E0A37E00DA889E /* Main.storyboard */,
-				CD9B594823FFD6C80079CE55 /* NewsCell.swift */,
-				CD9B594623FFD4030079CE55 /* NewsController.swift */,
+				37A0D4822400776600A8B53D /* NewsTableViewController.swift */,
+				37A0D4842400779800A8B53D /* NewsCell.swift */,
 				37640C2A23F1E9E500010342 /* Model */,
 				37640C2B23F1EA0C00010342 /* around Groups */,
 				37640C2C23F1EA2D00010342 /* around Friends */,
@@ -210,6 +211,13 @@
 				CD2ED46D23E4AAFE0034A2DD /* FriendsTableTableViewController.swift */,
 			);
 			path = "around Friends";
+			sourceTree = "<group>";
+		};
+		37A0D4812400645700A8B53D /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,14 +355,14 @@
 				37001D2123E0A37E00DA889E /* ViewController.swift in Sources */,
 				CD31E95B23FD69D900618EBE /* FriendCellVeiwHeader.swift in Sources */,
 				CD2ED46E23E4AAFE0034A2DD /* FriendsTableTableViewController.swift in Sources */,
-				CD9B594723FFD4030079CE55 /* NewsController.swift in Sources */,
 				CD6BB15523F185E0009637DC /* GlobalGroupCell.swift in Sources */,
 				CD6BB15323F17CAF009637DC /* GroupCell.swift in Sources */,
+				37A0D4832400776600A8B53D /* NewsTableViewController.swift in Sources */,
 				CD2ED46C23E4A7BC0034A2DD /* FirstTabBarViewController.swift in Sources */,
 				CD6FCF6D23F5CFFF001384E4 /* FaceImageView.swift in Sources */,
 				37001D1D23E0A37E00DA889E /* AppDelegate.swift in Sources */,
 				CD6FCF7323F5E774001384E4 /* TestView2.swift in Sources */,
-				CD9B594923FFD6C80079CE55 /* NewsCell.swift in Sources */,
+				37A0D4852400779800A8B53D /* NewsCell.swift in Sources */,
 				CD2ED47223E4B0130034A2DD /* GlobalSearchGroup.swift in Sources */,
 				374452DE23F73B7E00584375 /* LikeCount1.swift in Sources */,
 				CD2ED47023E4AFCD0034A2DD /* UserGroup.swift in Sources */,
