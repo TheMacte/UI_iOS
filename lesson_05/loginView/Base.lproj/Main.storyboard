@@ -100,7 +100,61 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.23188405797103" y="137.27678571428569"/>
+            <point key="canvasLocation" x="-32" y="137"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="U2X-9Y-lZN">
+            <objects>
+                <navigationController id="v9k-Rq-ggP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="3oG-go-t2O"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mEP-DB-p9E">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="TDF-if-oop" kind="relationship" relationship="rootViewController" id="RVP-q7-I0i"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="biA-CG-TzF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1732" y="-625"/>
+        </scene>
+        <!--Новости-->
+        <scene sceneID="izn-iF-6g5">
+            <objects>
+                <collectionViewController title="Новости" id="TDF-if-oop" customClass="NewsController" customModule="loginView" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Yp0-YB-rvp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fDt-Ty-q8c">
+                            <size key="itemSize" width="414" height="260"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="H9P-jV-XIC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="HcL-ab-nrC">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="414" height="260"/>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="TDF-if-oop" id="3w6-zZ-nzs"/>
+                            <outlet property="delegate" destination="TDF-if-oop" id="e5C-OQ-0zs"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Item" image="paperclip" catalog="system" id="9Nx-LB-Qkl"/>
+                    <navigationItem key="navigationItem" title="Новости" id="A4I-8x-hWj"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kgF-aU-NXt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2642" y="-625"/>
         </scene>
         <!--First Tab Bar View Controller-->
         <scene sceneID="ZS3-Kb-4QA">
@@ -115,6 +169,7 @@
                     <connections>
                         <segue destination="WfD-qk-t1p" kind="relationship" relationship="viewControllers" id="LPN-eZ-alz"/>
                         <segue destination="bwN-tl-afm" kind="relationship" relationship="viewControllers" id="fhR-Fz-fPJ"/>
+                        <segue destination="v9k-Rq-ggP" kind="relationship" relationship="viewControllers" id="2Nq-Zf-fsb"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K4P-z0-SVd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -403,7 +458,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhH-YE-tUM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1805.7971014492755" y="1092.8571428571429"/>
+            <point key="canvasLocation" x="1732" y="899"/>
         </scene>
         <!--Global Search Group-->
         <scene sceneID="C7t-bW-d25">
@@ -461,7 +516,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tgj-jb-no8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="8dH-Sm-5gM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2702.898550724638" y="1092.8571428571429"/>
+            <point key="canvasLocation" x="2642" y="899"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dUv-jP-bmu">
@@ -480,11 +535,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UEI-D1-v2x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="895.6521739130435" y="1092.8571428571429"/>
+            <point key="canvasLocation" x="896" y="899"/>
         </scene>
     </scenes>
     <resources>
         <image name="Boris" width="52" height="100"/>
+        <image name="paperclip" catalog="system" width="64" height="64"/>
         <image name="userpick" width="120" height="124"/>
     </resources>
 </document>
