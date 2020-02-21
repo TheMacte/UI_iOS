@@ -85,7 +85,7 @@ class ViewController: UIViewController {
         guard let ownLogin = login.text,
             let ownPassword = password.text else { return false }
         
-        if ownLogin == "admin" && ownPassword == "123456" {
+        if ownLogin == "admin" && ownPassword == "admin" {
             return true
         } else {
             return false

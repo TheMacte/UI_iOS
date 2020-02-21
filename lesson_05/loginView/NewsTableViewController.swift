@@ -10,8 +10,7 @@ import UIKit
 
 class NewsTableViewController: UITableViewController {
         
-        let newsText = ["Александр Сергеевич Пушкин"
-        ]
+        let newsText = ["Александр Сергеевич Пушкин"]
 
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -42,8 +41,8 @@ class NewsTableViewController: UITableViewController {
             
             //заполняем начальными значениями
             cell.textField.text = newsSingleText
-            cell.textField.translatesAutoresizingMaskIntoConstraints = true
-            cell.textField.sizeToFit()
+            //cell.textField.translatesAutoresizingMaskIntoConstraints = true
+            //cell.textField.sizeToFit()
             
             return cell
         }

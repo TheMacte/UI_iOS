@@ -42,6 +42,5 @@ class NewsCell: UITableViewCell {
         commentsButton.image = nil
         viewsImage.image = nil
         viewsCounter.text = ""
-        
     }
 }
