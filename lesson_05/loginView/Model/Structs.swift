@@ -31,5 +31,7 @@ struct News {
     var autherAvatar: UIImage
     var newsImage: UIImage
     var newsText: String
+    var likesCounter: Int
+    var seenCounter: Int
 }
     

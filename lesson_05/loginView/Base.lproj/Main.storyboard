@@ -154,20 +154,6 @@
                                                 <constraint firstAttribute="width" secondItem="URN-eM-6pm" secondAttribute="height" multiplier="1:1" id="x70-gx-JR0"/>
                                             </constraints>
                                         </imageView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SLY-Z3-M5N">
-                                            <rect key="frame" x="20" y="542" width="50" height="50"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="SLY-Z3-M5N" secondAttribute="height" multiplier="1:1" id="dam-w4-TAE"/>
-                                                <constraint firstAttribute="height" constant="50" id="mjh-K1-JMt"/>
-                                            </constraints>
-                                        </imageView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JjU-7a-lZg">
-                                            <rect key="frame" x="344" y="542" width="50" height="50"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="JjU-7a-lZg" secondAttribute="height" multiplier="1:1" id="0as-Mb-g1Q"/>
-                                                <constraint firstAttribute="height" constant="50" id="w3U-Zf-0Rd"/>
-                                            </constraints>
-                                        </imageView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="To5-rl-Qt6">
                                             <rect key="frame" x="248" y="389" width="0.0" height="0.0"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -194,45 +180,63 @@
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezQ-oT-iQi">
-                                            <rect key="frame" x="104" y="552" width="100" height="30"/>
-                                            <state key="normal" title="Мне нравится"/>
+                                            <rect key="frame" x="104" y="552" width="123" height="30"/>
+                                            <state key="normal" title="Комментировать"/>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOI-tA-r68">
-                                            <rect key="frame" x="248" y="552" width="85" height="30"/>
-                                            <state key="normal" title="Поделиться"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOI-tA-r68">
+                                            <rect key="frame" x="310" y="552" width="23" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="23" id="W4c-2z-Jlg"/>
+                                            </constraints>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="1"/>
+                                            <state key="normal" title="Поделиться" image="arrowshape.turn.up.right.fill" catalog="system"/>
                                         </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyZ-Jh-55C">
+                                            <rect key="frame" x="352" y="556" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8dd-jv-Fcx" customClass="LikeViewNews" customModule="loginView" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="542" width="50" height="50"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="WxL-49-t3g"/>
+                                                <constraint firstAttribute="height" constant="50" id="q8d-mg-v9v"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="8dd-jv-Fcx" firstAttribute="leading" secondItem="tZx-k3-gI1" secondAttribute="leading" constant="20" id="033-P5-FMx"/>
                                         <constraint firstItem="Y7m-Jj-f0d" firstAttribute="leading" secondItem="cj7-KB-WUG" secondAttribute="trailing" constant="8" id="5Ro-UD-Z1E"/>
+                                        <constraint firstAttribute="trailing" secondItem="pyZ-Jh-55C" secondAttribute="trailing" constant="20" id="6R2-JW-9aW"/>
                                         <constraint firstAttribute="trailing" secondItem="W2S-Dc-que" secondAttribute="trailing" constant="20" id="6yG-1N-yUR"/>
+                                        <constraint firstItem="8dd-jv-Fcx" firstAttribute="top" secondItem="URN-eM-6pm" secondAttribute="bottom" constant="18" id="CRP-0w-jac"/>
                                         <constraint firstItem="W2S-Dc-que" firstAttribute="leading" secondItem="tZx-k3-gI1" secondAttribute="leading" constant="20" id="GdW-Bt-y1p"/>
-                                        <constraint firstItem="JjU-7a-lZg" firstAttribute="leading" secondItem="OOI-tA-r68" secondAttribute="trailing" constant="11" id="H5C-qH-zcY"/>
-                                        <constraint firstAttribute="trailing" secondItem="JjU-7a-lZg" secondAttribute="trailing" constant="20" id="KK1-ru-Wed"/>
                                         <constraint firstItem="URN-eM-6pm" firstAttribute="leading" secondItem="tZx-k3-gI1" secondAttribute="leading" constant="20" id="KjK-vl-pSV"/>
-                                        <constraint firstItem="SLY-Z3-M5N" firstAttribute="top" secondItem="URN-eM-6pm" secondAttribute="bottom" constant="18" id="UC3-LS-a3n"/>
+                                        <constraint firstAttribute="bottom" secondItem="8dd-jv-Fcx" secondAttribute="bottom" constant="21" id="QDz-YP-9qY"/>
                                         <constraint firstItem="W2S-Dc-que" firstAttribute="top" secondItem="cj7-KB-WUG" secondAttribute="bottom" constant="8" id="UUs-e4-NWB"/>
-                                        <constraint firstAttribute="bottom" secondItem="SLY-Z3-M5N" secondAttribute="bottom" constant="21" id="bKx-dy-hku"/>
                                         <constraint firstItem="ezQ-oT-iQi" firstAttribute="top" secondItem="URN-eM-6pm" secondAttribute="bottom" constant="28" id="cQQ-lQ-jvr"/>
                                         <constraint firstItem="ezQ-oT-iQi" firstAttribute="leading" secondItem="7WJ-fq-IKm" secondAttribute="trailing" constant="5" id="cYy-Za-nT2"/>
                                         <constraint firstItem="cj7-KB-WUG" firstAttribute="top" secondItem="tZx-k3-gI1" secondAttribute="top" constant="11" id="cnd-nq-6r8"/>
                                         <constraint firstItem="cj7-KB-WUG" firstAttribute="leading" secondItem="tZx-k3-gI1" secondAttribute="leading" constant="20" id="e80-HK-e8D"/>
-                                        <constraint firstItem="SLY-Z3-M5N" firstAttribute="leading" secondItem="tZx-k3-gI1" secondAttribute="leading" constant="20" id="eES-cQ-GSh"/>
                                         <constraint firstItem="7WJ-fq-IKm" firstAttribute="top" secondItem="URN-eM-6pm" secondAttribute="bottom" constant="33" id="g3A-ts-vah"/>
-                                        <constraint firstItem="JjU-7a-lZg" firstAttribute="top" secondItem="URN-eM-6pm" secondAttribute="bottom" constant="18" id="hY5-Xi-dLk"/>
+                                        <constraint firstItem="pyZ-Jh-55C" firstAttribute="leading" secondItem="OOI-tA-r68" secondAttribute="trailing" constant="19" id="mo9-Re-Mzo"/>
                                         <constraint firstAttribute="trailing" secondItem="URN-eM-6pm" secondAttribute="trailing" constant="20" id="mvU-MG-2pc"/>
+                                        <constraint firstItem="pyZ-Jh-55C" firstAttribute="top" secondItem="URN-eM-6pm" secondAttribute="bottom" constant="32" id="oaL-gy-GIR"/>
                                         <constraint firstItem="OOI-tA-r68" firstAttribute="top" secondItem="URN-eM-6pm" secondAttribute="bottom" constant="28" id="pex-DC-N5D"/>
                                         <constraint firstItem="Y7m-Jj-f0d" firstAttribute="centerY" secondItem="cj7-KB-WUG" secondAttribute="centerY" id="pf9-A1-TXU"/>
                                         <constraint firstItem="URN-eM-6pm" firstAttribute="top" secondItem="W2S-Dc-que" secondAttribute="bottom" constant="17" id="qWN-Dg-c4V"/>
-                                        <constraint firstItem="7WJ-fq-IKm" firstAttribute="leading" secondItem="SLY-Z3-M5N" secondAttribute="trailing" constant="8" id="tWF-Qb-xvR"/>
+                                        <constraint firstItem="7WJ-fq-IKm" firstAttribute="leading" secondItem="8dd-jv-Fcx" secondAttribute="trailing" constant="8" id="zvg-qP-GWj"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="groupImage" destination="cj7-KB-WUG" id="AEu-tI-W9T"/>
                                     <outlet property="groupName" destination="Y7m-Jj-f0d" id="ZPV-Ox-4fW"/>
                                     <outlet property="likeCounter" destination="7WJ-fq-IKm" id="1ry-zR-cBJ"/>
-                                    <outlet property="likeImage" destination="SLY-Z3-M5N" id="Adx-ou-OLo"/>
+                                    <outlet property="likeNewsView" destination="8dd-jv-Fcx" id="zWs-cF-S8s"/>
                                     <outlet property="newsImage" destination="URN-eM-6pm" id="loA-cg-m90"/>
-                                    <outlet property="shareButton" destination="JjU-7a-lZg" id="MMv-kh-28D"/>
+                                    <outlet property="seenCount" destination="pyZ-Jh-55C" id="vzT-GA-BiG"/>
                                     <outlet property="textField" destination="W2S-Dc-que" id="9xY-3O-Xpl"/>
                                 </connections>
                             </tableViewCell>
@@ -632,6 +636,7 @@
     </scenes>
     <resources>
         <image name="Boris" width="52" height="100"/>
+        <image name="arrowshape.turn.up.right.fill" catalog="system" width="64" height="52"/>
         <image name="paperclip.circle" catalog="system" width="64" height="60"/>
         <image name="userpick" width="120" height="124"/>
     </resources>
