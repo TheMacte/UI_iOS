@@ -73,7 +73,12 @@ class OneFriendCell: UICollectionViewCell {
             if !touchedLike1Btn {
                 touchedLike1Btn = true
                 countOfLike += 1
-                likeCount1.text = String(countOfLike)
+                UIView.transition(with: likeCount1,
+                                  duration: 0.25,
+                                  options: .transitionCrossDissolve,
+                                  animations: {
+                                    self.likeCount1.text = String(countOfLike)
+                })
                 likeCount1.textColor = .red
                 heartColor = UIColor.red
                 likeView1.setNeedsDisplay()
@@ -81,7 +86,13 @@ class OneFriendCell: UICollectionViewCell {
             } else {
                 touchedLike1Btn = false
                 countOfLike -= 1
-                likeCount1.text = String(countOfLike)
+                UIView.transition(with: likeCount1,
+                                  duration: 0.25,
+                                  options: .transitionCrossDissolve,
+                                  animations: {
+                                    self.likeCount1.text = String(countOfLike)
+                })
+                
                 likeCount1.textColor = .none
                 heartColor = UIColor.green
                 likeView1.setNeedsDisplay()

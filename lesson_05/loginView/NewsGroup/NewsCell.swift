@@ -35,14 +35,26 @@ class NewsCell: UITableViewCell {
         if wasLiked == false {
             wasLiked = true
             counter += 1
-            likeCounter.text = String(counter)
+            UIView.transition(with: likeCounter,
+                              duration: 0.25,
+                              options: .transitionCrossDissolve,
+                              animations: {
+                                self.likeCounter.text = String(self.counter)
+            })
         } else {
             wasLiked = false
             counter -= 1
-            likeCounter.text = String(counter)
+            UIView.transition(with: likeCounter,
+                              duration: 0.25,
+                              options: .transitionCrossDissolve,
+                              animations: {
+                                self.likeCounter.text = String(self.counter)
+            })
         }
         
     }
+    
+    
     
     override func prepareForReuse() {
         super.prepareForReuse()
