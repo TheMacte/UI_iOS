@@ -10,6 +10,7 @@ import UIKit
 
 class NewsCell: UITableViewCell {
     private var wasLiked: Bool = false
+    private var counter = 0
     
     @IBOutlet weak var groupImage: UIImageView!
     @IBOutlet weak var groupName: UILabel!
@@ -33,12 +34,12 @@ class NewsCell: UITableViewCell {
         
         if wasLiked == false {
             wasLiked = true
-            //likeCounter += 1
-            //likeCounter.text = String(likeCounter)
+            counter += 1
+            likeCounter.text = String(counter)
         } else {
             wasLiked = false
-            //likeCounter -= 1
-            //likeCounter.text = String(likeCounter)
+            counter -= 1
+            likeCounter.text = String(counter)
         }
         
     }

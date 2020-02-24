@@ -17,6 +17,9 @@
 		37001D3F23E0A37F00DA889E /* loginViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37001D3E23E0A37F00DA889E /* loginViewUITests.swift */; };
 		374452DC23F7370600584375 /* LikeView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374452DB23F7370600584375 /* LikeView1.swift */; };
 		374452DE23F73B7E00584375 /* LikeCount1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374452DD23F73B7E00584375 /* LikeCount1.swift */; };
+		37648EAD240451E00038E411 /* DotsBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37648EAC240451E00038E411 /* DotsBack.swift */; };
+		37648EB5240453220038E411 /* DotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37648EB4240453220038E411 /* DotsViewController.swift */; };
+		37648EB72404552D0038E411 /* DotForLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37648EB62404552D0038E411 /* DotForLoading.swift */; };
 		37A0D4832400776600A8B53D /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A0D4822400776600A8B53D /* NewsTableViewController.swift */; };
 		37A0D4852400779800A8B53D /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A0D4842400779800A8B53D /* NewsCell.swift */; };
 		37E1BB2923F0995E00924875 /* FriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E1BB2823F0995E00924875 /* FriendsCell.swift */; };
@@ -72,6 +75,9 @@
 		37001D4023E0A37F00DA889E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		374452DB23F7370600584375 /* LikeView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeView1.swift; sourceTree = "<group>"; };
 		374452DD23F73B7E00584375 /* LikeCount1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeCount1.swift; sourceTree = "<group>"; };
+		37648EAC240451E00038E411 /* DotsBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsBack.swift; sourceTree = "<group>"; };
+		37648EB4240453220038E411 /* DotsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsViewController.swift; sourceTree = "<group>"; };
+		37648EB62404552D0038E411 /* DotForLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotForLoading.swift; sourceTree = "<group>"; };
 		37A0D4822400776600A8B53D /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		37A0D4842400779800A8B53D /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		37E1BB2823F0995E00924875 /* FriendsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCell.swift; sourceTree = "<group>"; };
@@ -141,6 +147,7 @@
 		37001D1B23E0A37E00DA889E /* loginView */ = {
 			isa = PBXGroup;
 			children = (
+				37648EAB240451A30038E411 /* LoadingDots */,
 				37001D1C23E0A37E00DA889E /* AppDelegate.swift */,
 				37001D1E23E0A37E00DA889E /* SceneDelegate.swift */,
 				37001D2023E0A37E00DA889E /* ViewController.swift */,
@@ -211,6 +218,17 @@
 				CD2ED46D23E4AAFE0034A2DD /* FriendsTableTableViewController.swift */,
 			);
 			path = "around Friends";
+			sourceTree = "<group>";
+		};
+		37648EAB240451A30038E411 /* LoadingDots */ = {
+			isa = PBXGroup;
+			children = (
+				37648EAC240451E00038E411 /* DotsBack.swift */,
+				37648EB4240453220038E411 /* DotsViewController.swift */,
+				37648EB62404552D0038E411 /* DotForLoading.swift */,
+			);
+			name = LoadingDots;
+			path = "around Friends/LoadingDots";
 			sourceTree = "<group>";
 		};
 		37A0D4812400645700A8B53D /* New Group */ = {
@@ -367,14 +385,17 @@
 				CD6FCF7323F5E774001384E4 /* TestView2.swift in Sources */,
 				37A0D4852400779800A8B53D /* NewsCell.swift in Sources */,
 				CD2ED47223E4B0130034A2DD /* GlobalSearchGroup.swift in Sources */,
+				37648EAD240451E00038E411 /* DotsBack.swift in Sources */,
 				374452DE23F73B7E00584375 /* LikeCount1.swift in Sources */,
 				CD2ED47023E4AFCD0034A2DD /* UserGroup.swift in Sources */,
 				37001D1F23E0A37E00DA889E /* SceneDelegate.swift in Sources */,
 				CD6BB15723F18BF6009637DC /* Structs.swift in Sources */,
 				37E1BB2923F0995E00924875 /* FriendsCell.swift in Sources */,
+				37648EB5240453220038E411 /* DotsViewController.swift in Sources */,
 				CD83B60623F693BC0021E950 /* LikeView.swift in Sources */,
 				CD6FCF6F23F5D022001384E4 /* UnderFaceView.swift in Sources */,
 				374452DC23F7370600584375 /* LikeView1.swift in Sources */,
+				37648EB72404552D0038E411 /* DotForLoading.swift in Sources */,
 				CD6BB15123F16271009637DC /* OneFriendController.swift in Sources */,
 				CD6BB14F23F15D60009637DC /* OneFriendCell.swift in Sources */,
 				CD77B3FC2403191C005C7E7E /* LikeViewNews.swift in Sources */,

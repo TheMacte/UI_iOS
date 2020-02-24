@@ -102,6 +102,71 @@
             </objects>
             <point key="canvasLocation" x="-32" y="137"/>
         </scene>
+        <!--DotsLoading-->
+        <scene sceneID="v7h-WF-QKc">
+            <objects>
+                <viewController title="DotsLoading" id="EyY-cS-vHP" customClass="DotsViewController" customModule="loginView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bPn-QT-PN1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="459-y5-GmO" customClass="DotsBack" customModule="loginView" customModuleProvider="target">
+                                <rect key="frame" x="161.5" y="403.5" width="91" height="35"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rwq-mR-e2p" customClass="DotForLoading" customModule="loginView" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="7.5" width="20" height="20"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qy7-HE-Dvw" customClass="DotForLoading" customModule="loginView" customModuleProvider="target">
+                                        <rect key="frame" x="35.5" y="7.5" width="20" height="20"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="Pfg-bN-zsV"/>
+                                            <constraint firstAttribute="height" constant="20" id="zQ3-RW-NLb"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nzy-yE-ccL" customClass="DotForLoading" customModule="loginView" customModuleProvider="target">
+                                        <rect key="frame" x="64" y="7.5" width="20" height="20"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Rwq-mR-e2p" firstAttribute="width" secondItem="qy7-HE-Dvw" secondAttribute="width" id="4cB-j4-FhQ"/>
+                                    <constraint firstItem="qy7-HE-Dvw" firstAttribute="centerY" secondItem="459-y5-GmO" secondAttribute="centerY" id="9bk-yY-ddn"/>
+                                    <constraint firstItem="Rwq-mR-e2p" firstAttribute="centerY" secondItem="qy7-HE-Dvw" secondAttribute="centerY" id="Dar-1g-wQc"/>
+                                    <constraint firstItem="Rwq-mR-e2p" firstAttribute="height" secondItem="qy7-HE-Dvw" secondAttribute="height" id="Gmu-6j-f1h"/>
+                                    <constraint firstAttribute="width" constant="91" id="JxE-xr-UrP"/>
+                                    <constraint firstItem="qy7-HE-Dvw" firstAttribute="centerX" secondItem="459-y5-GmO" secondAttribute="centerX" id="OFg-xw-DDJ"/>
+                                    <constraint firstAttribute="height" constant="35" id="Unj-Qe-2Pu"/>
+                                    <constraint firstItem="Nzy-yE-ccL" firstAttribute="centerY" secondItem="qy7-HE-Dvw" secondAttribute="centerY" id="dge-4k-Q6C"/>
+                                    <constraint firstItem="Nzy-yE-ccL" firstAttribute="leading" secondItem="qy7-HE-Dvw" secondAttribute="trailing" constant="8.5" id="n1N-hY-BG9"/>
+                                    <constraint firstItem="Nzy-yE-ccL" firstAttribute="width" secondItem="qy7-HE-Dvw" secondAttribute="width" id="vNp-NW-NIT"/>
+                                    <constraint firstItem="qy7-HE-Dvw" firstAttribute="leading" secondItem="Rwq-mR-e2p" secondAttribute="trailing" constant="7.5" id="xR3-xc-ScA"/>
+                                    <constraint firstItem="Nzy-yE-ccL" firstAttribute="height" secondItem="qy7-HE-Dvw" secondAttribute="height" id="zuR-Nk-p4H"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="459-y5-GmO" firstAttribute="centerY" secondItem="bPn-QT-PN1" secondAttribute="centerY" id="2OE-du-rQY"/>
+                            <constraint firstItem="459-y5-GmO" firstAttribute="centerY" secondItem="bPn-QT-PN1" secondAttribute="centerY" id="77I-No-wyV"/>
+                            <constraint firstItem="459-y5-GmO" firstAttribute="centerX" secondItem="bPn-QT-PN1" secondAttribute="centerX" id="8hJ-xW-ZmM"/>
+                            <constraint firstItem="459-y5-GmO" firstAttribute="centerX" secondItem="bPn-QT-PN1" secondAttribute="centerX" id="yne-iD-B5c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TWH-oA-rYN"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="elj-2m-BFb"/>
+                    <connections>
+                        <outlet property="dotsBack" destination="459-y5-GmO" id="tIj-dR-k7z"/>
+                        <outlet property="firstDot" destination="Rwq-mR-e2p" id="cYF-xK-6Fw"/>
+                        <outlet property="secondDot" destination="qy7-HE-Dvw" id="YdJ-mb-X8r"/>
+                        <outlet property="thirdDot" destination="Nzy-yE-ccL" id="jXD-Bn-qWE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SMv-w4-TnG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-33.333333333333336" y="-610.04464285714278"/>
+        </scene>
         <!--Item-->
         <scene sceneID="U2X-9Y-lZN">
             <objects>
@@ -266,6 +331,7 @@
                         <segue destination="WfD-qk-t1p" kind="relationship" relationship="viewControllers" id="LPN-eZ-alz"/>
                         <segue destination="bwN-tl-afm" kind="relationship" relationship="viewControllers" id="fhR-Fz-fPJ"/>
                         <segue destination="v9k-Rq-ggP" kind="relationship" relationship="viewControllers" id="2Nq-Zf-fsb"/>
+                        <segue destination="EyY-cS-vHP" kind="relationship" relationship="viewControllers" id="43o-Tr-w74"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K4P-z0-SVd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -290,14 +356,14 @@
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationWidth="10" reuseIdentifier="FriendsCell" id="vwQ-E1-QtA" customClass="FriendsCell" customModule="loginView" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="414" height="61"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="61.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vwQ-E1-QtA" id="ARr-Gn-KJP">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="61"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="61.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUX-3a-Y6p">
-                                            <rect key="frame" x="108" y="20" width="286" height="21"/>
+                                            <rect key="frame" x="108" y="20" width="286" height="21.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
