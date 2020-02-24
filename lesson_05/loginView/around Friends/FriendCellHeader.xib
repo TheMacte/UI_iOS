@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view alpha="0.5" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="FriendCellViewHeader" customModule="loginView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="436" height="111"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Проверка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APW-FX-UfV">
+                    <rect key="frame" x="179" y="45" width="78.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4dn-hB-wqo">
+                    <rect key="frame" x="129.5" y="48" width="17.5" height="15.5"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="4dn-hB-wqo" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="BRB-Ud-e9m"/>
+                <constraint firstItem="APW-FX-UfV" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="XGk-0J-eh0"/>
+                <constraint firstItem="APW-FX-UfV" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="iNB-Rg-wRB"/>
+                <constraint firstItem="APW-FX-UfV" firstAttribute="leading" secondItem="4dn-hB-wqo" secondAttribute="trailing" constant="32" id="kiF-B1-HBn"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cellHeaderImageView" destination="4dn-hB-wqo" id="Z51-OL-MAX"/>
+                <outlet property="cellHeaderLableView" destination="APW-FX-UfV" id="Lqj-h5-Fy6"/>
+            </connections>
+            <point key="canvasLocation" x="240.57971014492756" y="-138.28125"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="pencil" catalog="system" width="64" height="56"/>
+    </resources>
+</document>
