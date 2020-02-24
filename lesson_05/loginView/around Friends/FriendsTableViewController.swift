@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FriendsTableTableViewController: UITableViewController {
+class FriendsTableViewController: UITableViewController {
     
     @IBOutlet var searchFrienda: UITableView!
     
@@ -108,7 +108,7 @@ class FriendsTableTableViewController: UITableViewController {
     }
 }
 
-extension FriendsTableTableViewController: UISearchBarDelegate {
+extension FriendsTableViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filtrenFriends = friendsForSort.filter { $0.range(of: searchText, options: .caseInsensitive) != nil }
         if filtrenFriends.count == 0 {filtrenFriends = friendsForSort}
