@@ -25,3 +25,13 @@ struct Groups: NameOf {
     var avatar: UIImage
     var ruName: String
 }
+
+struct News {
+    var auther: String
+    var autherAvatar: UIImage
+    var newsImage: UIImage
+    var newsText: String
+    var likesCounter: Int
+    var seenCounter: Int
+}
+    
