@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wzX-n1-DEb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -59,10 +59,46 @@
                                             <segue destination="wzX-n1-DEb" kind="show" id="FZp-xF-LFj"/>
                                         </connections>
                                     </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vuw-UT-ZRq" customClass="DotsBack" customModule="loginView" customModuleProvider="target">
+                                        <rect key="frame" x="161.5" y="314" width="91" height="35"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QE6-qF-Nl7" customClass="DotForLoading" customModule="loginView" customModuleProvider="target">
+                                                <rect key="frame" x="8" y="7.5" width="20" height="20"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CHB-hJ-Jar" customClass="DotForLoading" customModule="loginView" customModuleProvider="target">
+                                                <rect key="frame" x="35.5" y="7.5" width="20" height="20"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="YOo-1H-DwX"/>
+                                                    <constraint firstAttribute="height" constant="20" id="n4D-f6-wO2"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="160-tQ-bsF" customClass="DotForLoading" customModule="loginView" customModuleProvider="target">
+                                                <rect key="frame" x="64" y="7.5" width="20" height="20"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="91" id="5sY-Mg-kRe"/>
+                                            <constraint firstItem="CHB-hJ-Jar" firstAttribute="centerY" secondItem="vuw-UT-ZRq" secondAttribute="centerY" id="7t1-df-1H8"/>
+                                            <constraint firstItem="QE6-qF-Nl7" firstAttribute="width" secondItem="CHB-hJ-Jar" secondAttribute="width" id="AWu-z6-6Hp"/>
+                                            <constraint firstItem="QE6-qF-Nl7" firstAttribute="height" secondItem="CHB-hJ-Jar" secondAttribute="height" id="J8c-OT-DsE"/>
+                                            <constraint firstItem="CHB-hJ-Jar" firstAttribute="leading" secondItem="QE6-qF-Nl7" secondAttribute="trailing" constant="7.5" id="OfT-L8-MLi"/>
+                                            <constraint firstItem="160-tQ-bsF" firstAttribute="centerY" secondItem="CHB-hJ-Jar" secondAttribute="centerY" id="Qwh-pD-CTy"/>
+                                            <constraint firstItem="160-tQ-bsF" firstAttribute="height" secondItem="CHB-hJ-Jar" secondAttribute="height" id="eZg-DF-dGW"/>
+                                            <constraint firstItem="160-tQ-bsF" firstAttribute="width" secondItem="CHB-hJ-Jar" secondAttribute="width" id="f4a-cf-JTb"/>
+                                            <constraint firstItem="CHB-hJ-Jar" firstAttribute="centerX" secondItem="vuw-UT-ZRq" secondAttribute="centerX" id="hI5-Sv-8nD"/>
+                                            <constraint firstAttribute="height" constant="35" id="l3v-w2-6Q9"/>
+                                            <constraint firstItem="160-tQ-bsF" firstAttribute="leading" secondItem="CHB-hJ-Jar" secondAttribute="trailing" constant="8.5" id="sbR-pp-5hq"/>
+                                            <constraint firstItem="QE6-qF-Nl7" firstAttribute="centerY" secondItem="CHB-hJ-Jar" secondAttribute="centerY" id="zs5-Fm-rtq"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="F4w-a3-jvD" firstAttribute="top" secondItem="Nb9-ff-Mdn" secondAttribute="bottom" constant="114" id="2lZ-A4-9nY"/>
                                     <constraint firstItem="Yxs-Be-Ghn" firstAttribute="centerX" secondItem="vJM-3r-EtX" secondAttribute="centerX" id="51Q-w4-AK8"/>
+                                    <constraint firstItem="vuw-UT-ZRq" firstAttribute="centerX" secondItem="Nb9-ff-Mdn" secondAttribute="centerX" id="R9K-I8-EbG"/>
                                     <constraint firstItem="cRd-RF-5g6" firstAttribute="top" secondItem="jbZ-rZ-hcr" secondAttribute="bottom" constant="114" id="T4t-0Q-VBX"/>
                                     <constraint firstAttribute="trailing" secondItem="Nb9-ff-Mdn" secondAttribute="trailing" constant="97" id="YGw-Ij-bWa"/>
                                     <constraint firstItem="jbZ-rZ-hcr" firstAttribute="top" secondItem="F4w-a3-jvD" secondAttribute="bottom" constant="10" id="bJi-bA-W3C"/>
@@ -72,6 +108,7 @@
                                     <constraint firstItem="XHP-hU-eGE" firstAttribute="top" secondItem="Yxs-Be-Ghn" secondAttribute="bottom" constant="114" id="f8A-YU-QDy"/>
                                     <constraint firstItem="cRd-RF-5g6" firstAttribute="centerX" secondItem="jbZ-rZ-hcr" secondAttribute="centerX" id="fth-kS-NxT"/>
                                     <constraint firstItem="jbZ-rZ-hcr" firstAttribute="centerX" secondItem="F4w-a3-jvD" secondAttribute="centerX" id="h2l-aA-vPt"/>
+                                    <constraint firstItem="vuw-UT-ZRq" firstAttribute="top" secondItem="Nb9-ff-Mdn" secondAttribute="bottom" constant="40" id="lyK-Kg-EEV"/>
                                     <constraint firstItem="Nb9-ff-Mdn" firstAttribute="centerX" secondItem="XHP-hU-eGE" secondAttribute="centerX" id="mn6-aJ-6ri"/>
                                     <constraint firstItem="XHP-hU-eGE" firstAttribute="centerX" secondItem="Yxs-Be-Ghn" secondAttribute="centerX" id="q4U-JQ-hCq"/>
                                     <constraint firstAttribute="bottom" secondItem="cRd-RF-5g6" secondAttribute="bottom" constant="213" id="qXc-qu-Gbx"/>
@@ -93,79 +130,17 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="firstDot" destination="QE6-qF-Nl7" id="Hi3-YL-auh"/>
                         <outlet property="login" destination="Nb9-ff-Mdn" id="7q1-OS-ucH"/>
                         <outlet property="password" destination="jbZ-rZ-hcr" id="DHv-eR-G4N"/>
                         <outlet property="scrollView" destination="vJM-3r-EtX" id="baS-bR-Fjw"/>
+                        <outlet property="secondDot" destination="CHB-hJ-Jar" id="IQa-SY-9fb"/>
+                        <outlet property="thirdDot" destination="160-tQ-bsF" id="bFO-nI-mL0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-32" y="137"/>
-        </scene>
-        <!--DotsLoading-->
-        <scene sceneID="v7h-WF-QKc">
-            <objects>
-                <viewController title="DotsLoading" id="EyY-cS-vHP" customClass="DotsViewController" customModule="loginView" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bPn-QT-PN1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="459-y5-GmO" customClass="DotsBack" customModule="loginView" customModuleProvider="target">
-                                <rect key="frame" x="161.5" y="403.5" width="91" height="35"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rwq-mR-e2p" customClass="DotForLoading" customModule="loginView" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="7.5" width="20" height="20"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qy7-HE-Dvw" customClass="DotForLoading" customModule="loginView" customModuleProvider="target">
-                                        <rect key="frame" x="35.5" y="7.5" width="20" height="20"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="20" id="Pfg-bN-zsV"/>
-                                            <constraint firstAttribute="height" constant="20" id="zQ3-RW-NLb"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nzy-yE-ccL" customClass="DotForLoading" customModule="loginView" customModuleProvider="target">
-                                        <rect key="frame" x="64" y="7.5" width="20" height="20"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="Rwq-mR-e2p" firstAttribute="width" secondItem="qy7-HE-Dvw" secondAttribute="width" id="4cB-j4-FhQ"/>
-                                    <constraint firstItem="qy7-HE-Dvw" firstAttribute="centerY" secondItem="459-y5-GmO" secondAttribute="centerY" id="9bk-yY-ddn"/>
-                                    <constraint firstItem="Rwq-mR-e2p" firstAttribute="centerY" secondItem="qy7-HE-Dvw" secondAttribute="centerY" id="Dar-1g-wQc"/>
-                                    <constraint firstItem="Rwq-mR-e2p" firstAttribute="height" secondItem="qy7-HE-Dvw" secondAttribute="height" id="Gmu-6j-f1h"/>
-                                    <constraint firstAttribute="width" constant="91" id="JxE-xr-UrP"/>
-                                    <constraint firstItem="qy7-HE-Dvw" firstAttribute="centerX" secondItem="459-y5-GmO" secondAttribute="centerX" id="OFg-xw-DDJ"/>
-                                    <constraint firstAttribute="height" constant="35" id="Unj-Qe-2Pu"/>
-                                    <constraint firstItem="Nzy-yE-ccL" firstAttribute="centerY" secondItem="qy7-HE-Dvw" secondAttribute="centerY" id="dge-4k-Q6C"/>
-                                    <constraint firstItem="Nzy-yE-ccL" firstAttribute="leading" secondItem="qy7-HE-Dvw" secondAttribute="trailing" constant="8.5" id="n1N-hY-BG9"/>
-                                    <constraint firstItem="Nzy-yE-ccL" firstAttribute="width" secondItem="qy7-HE-Dvw" secondAttribute="width" id="vNp-NW-NIT"/>
-                                    <constraint firstItem="qy7-HE-Dvw" firstAttribute="leading" secondItem="Rwq-mR-e2p" secondAttribute="trailing" constant="7.5" id="xR3-xc-ScA"/>
-                                    <constraint firstItem="Nzy-yE-ccL" firstAttribute="height" secondItem="qy7-HE-Dvw" secondAttribute="height" id="zuR-Nk-p4H"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="459-y5-GmO" firstAttribute="centerY" secondItem="bPn-QT-PN1" secondAttribute="centerY" id="2OE-du-rQY"/>
-                            <constraint firstItem="459-y5-GmO" firstAttribute="centerY" secondItem="bPn-QT-PN1" secondAttribute="centerY" id="77I-No-wyV"/>
-                            <constraint firstItem="459-y5-GmO" firstAttribute="centerX" secondItem="bPn-QT-PN1" secondAttribute="centerX" id="8hJ-xW-ZmM"/>
-                            <constraint firstItem="459-y5-GmO" firstAttribute="centerX" secondItem="bPn-QT-PN1" secondAttribute="centerX" id="yne-iD-B5c"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="TWH-oA-rYN"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="elj-2m-BFb"/>
-                    <connections>
-                        <outlet property="dotsBack" destination="459-y5-GmO" id="tIj-dR-k7z"/>
-                        <outlet property="firstDot" destination="Rwq-mR-e2p" id="cYF-xK-6Fw"/>
-                        <outlet property="secondDot" destination="qy7-HE-Dvw" id="YdJ-mb-X8r"/>
-                        <outlet property="thirdDot" destination="Nzy-yE-ccL" id="jXD-Bn-qWE"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SMv-w4-TnG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-33.333333333333336" y="-610.04464285714278"/>
         </scene>
         <!--Item-->
         <scene sceneID="U2X-9Y-lZN">
@@ -331,7 +306,6 @@
                         <segue destination="WfD-qk-t1p" kind="relationship" relationship="viewControllers" id="LPN-eZ-alz"/>
                         <segue destination="bwN-tl-afm" kind="relationship" relationship="viewControllers" id="fhR-Fz-fPJ"/>
                         <segue destination="v9k-Rq-ggP" kind="relationship" relationship="viewControllers" id="2Nq-Zf-fsb"/>
-                        <segue destination="EyY-cS-vHP" kind="relationship" relationship="viewControllers" id="43o-Tr-w74"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K4P-z0-SVd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
