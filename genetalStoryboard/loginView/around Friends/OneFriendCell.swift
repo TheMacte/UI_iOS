@@ -8,10 +8,11 @@
 
 import UIKit
 
-var countOfLike:Int = 10
-let allPik:[String] = ["Alla", "Boris", "Clara", "Dmitriy"]
-
 class OneFriendCell: UICollectionViewCell {
+    private var countOfLike:Int = 10
+    private let allPik:[String] = ["Alla", "Boris", "Clara", "Dmitriy"]
+    private var photoCounter:Int = 0
+    
     // Скругление и тень
     @IBOutlet var userFaceOfoneUser: UIImageView!
     @IBOutlet weak var userFaceOfoneUserNew: FaceImageView!
@@ -28,17 +29,7 @@ class OneFriendCell: UICollectionViewCell {
     @IBOutlet weak var likeCount1: LikeCount1!
     
     @IBAction func iLikeItButton(_ sender: Any) {
-        if showStatus == false {
-            showStatus = true
-            countOfLike += 1
-            likeCount.textColor = .green
-        } else {
-            showStatus = false
-            countOfLike -= 1
-            likeCount.textColor = .none
-        }
-        likeView.setNeedsDisplay()
-        likeCount.text = String(countOfLike)
+        wasLiked()
     }
     
     @IBInspectable var color:UIColor = .red
@@ -69,22 +60,23 @@ class OneFriendCell: UICollectionViewCell {
         likeView1.isUserInteractionEnabled = true
         likeView1.addGestureRecognizer(tabGesture)
         
-        
+        //Ловим свайп
         let swipeRight = UISwipeGestureRecognizer(target: self, action:  #selector(respondToSwipeGesture(_:)))
         swipeRight.direction = .right
         userFaceOfoneUser.addGestureRecognizer(swipeRight)
-        
         let swipeLeft = UISwipeGestureRecognizer(target: self, action:  #selector(respondToSwipeGesture(_:)))
         swipeLeft.direction = .left
         userFaceOfoneUser.addGestureRecognizer(swipeLeft)
-        
         userFaceOfoneUser.isUserInteractionEnabled = true
-        
     }
-    var photoCounter:Int = 0
     
+    
+    
+}
+
+// MARK: Приватные методы
+extension OneFriendCell {
     @objc func respondToSwipeGesture(_ gesture: UISwipeGestureRecognizer) {
-        
         switch gesture.direction {
         case UISwipeGestureRecognizer.Direction.right:
             rideSwipeByPhoto()
@@ -93,6 +85,54 @@ class OneFriendCell: UICollectionViewCell {
         default:
             print("none")
         }
+    }
+    
+    //Обрабатываем нажатия
+    @objc func tapped(_ sender: UITapGestureRecognizer) {
+        if !touchedLike1Btn {
+            touchedLike1Btn = true
+            countOfLike += 1
+            UIView.transition(with: likeCount1,
+                              duration: 0.25,
+                              options: .transitionCrossDissolve,
+                              animations: {
+                                self.likeCount1.text = String(self.countOfLike)
+            })
+            likeCount1.textColor = .red
+            heartColor = UIColor.red
+            likeView1.setNeedsDisplay()
+            
+        } else {
+            touchedLike1Btn = false
+            countOfLike -= 1
+            UIView.transition(with: likeCount1,
+                              duration: 0.25,
+                              options: .transitionCrossDissolve,
+                              animations: {
+                                self.likeCount1.text = String(self.countOfLike)
+            })
+            likeCount1.textColor = .none
+            heartColor = UIColor.green
+            likeView1.setNeedsDisplay()
+        }
+        likeView1.setNeedsDisplay()
+    }
+}
+
+//Приватные методы
+extension OneFriendCell {
+    private func wasLiked(){
+        if showStatus == false {
+            showStatus = true
+            countOfLike += 1
+            likeCount.textColor = .green
+        } else {
+            showStatus = false
+            countOfLike -= 1
+            likeCount.textColor = .none
+        }
+        likeView.setNeedsDisplay()
+        likeCount.text = String(countOfLike)
     }
     
     private func rideSwipeByPhoto(){
@@ -116,7 +156,7 @@ class OneFriendCell: UICollectionViewCell {
                                                        animations: {
                                                         self.userFaceOfoneUserNew.transform = CGAffineTransform(scaleX: 0.01,y: 0.01)
                                                         self.userFaceOfoneUserNew.alpha = 0.5
-                                                        self.userFaceOfoneUser.image = UIImage(named: allPik[self.photoCounter])
+                                                        self.userFaceOfoneUser.image = UIImage(named: self.allPik[self.photoCounter])
                                                         self.userFaceOfoneUser.transform = CGAffineTransform(scaleX: 1,y: 1)
                                                         self.userFaceOfoneUserNew.frame.origin.x += 106
                                                         self.userFaceOfoneUser.alpha = 1
@@ -154,41 +194,10 @@ class OneFriendCell: UICollectionViewCell {
                                     })
         },completion: {(true) -> Void in
             self.userFaceOfoneUser.transform = CGAffineTransform(scaleX: 1,y: 1)
-            self.userFaceOfoneUser.image  = UIImage(named: allPik[self.photoCounter])
+            self.userFaceOfoneUser.image  = UIImage(named: self.allPik[self.photoCounter])
             self.userFaceOfoneUserNew.isHidden = true
             self.userFaceOfoneUserNew.frame.origin.x -= 106
             self.userFaceOfoneUser.alpha = 1
         })
-    }
-    //Обрабатываем нажатия
-    @objc func tapped(_ sender: UITapGestureRecognizer) {
-        if !touchedLike1Btn {
-            touchedLike1Btn = true
-            countOfLike += 1
-            UIView.transition(with: likeCount1,
-                              duration: 0.25,
-                              options: .transitionCrossDissolve,
-                              animations: {
-                                self.likeCount1.text = String(countOfLike)
-            })
-            likeCount1.textColor = .red
-            heartColor = UIColor.red
-            likeView1.setNeedsDisplay()
-            
-        } else {
-            touchedLike1Btn = false
-            countOfLike -= 1
-            UIView.transition(with: likeCount1,
-                              duration: 0.25,
-                              options: .transitionCrossDissolve,
-                              animations: {
-                                self.likeCount1.text = String(countOfLike)
-            })
-            
-            likeCount1.textColor = .none
-            heartColor = UIColor.green
-            likeView1.setNeedsDisplay()
-        }
-        likeView1.setNeedsDisplay()
     }
 }
