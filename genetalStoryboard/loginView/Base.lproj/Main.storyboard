@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wzX-n1-DEb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -330,14 +330,14 @@
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationWidth="10" reuseIdentifier="FriendsCell" id="vwQ-E1-QtA" customClass="FriendsCell" customModule="loginView" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="414" height="61.5"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="61"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vwQ-E1-QtA" id="ARr-Gn-KJP">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="61.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="61"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUX-3a-Y6p">
-                                            <rect key="frame" x="108" y="20" width="286" height="21.5"/>
+                                            <rect key="frame" x="108" y="20" width="286" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -456,13 +456,23 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userpick" translatesAutoresizingMaskIntoConstraints="NO" id="P7C-iT-F2l" customClass="FaceImageView" customModule="loginView" customModuleProvider="target">
+                                            <rect key="frame" x="51" y="123.5" width="100" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="BOH-yt-C1V"/>
+                                                <constraint firstAttribute="width" secondItem="P7C-iT-F2l" secondAttribute="height" multiplier="1:1" id="Qxr-O8-1H7"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="A0b-hJ-Ooi" firstAttribute="top" secondItem="DFa-yW-qLr" secondAttribute="bottom" constant="46.5" id="5Qs-xK-Gbl"/>
                                         <constraint firstItem="DFa-yW-qLr" firstAttribute="leading" secondItem="ZO2-bH-sps" secondAttribute="leading" constant="157" id="84h-PD-eKd"/>
+                                        <constraint firstItem="P7C-iT-F2l" firstAttribute="leading" secondItem="ZO2-bH-sps" secondAttribute="leading" constant="51" id="88a-RI-ySN"/>
+                                        <constraint firstItem="P7C-iT-F2l" firstAttribute="width" secondItem="P7C-iT-F2l" secondAttribute="height" multiplier="1:1" id="Cxt-lg-JV7"/>
                                         <constraint firstItem="3sv-bj-5qF" firstAttribute="leading" secondItem="ZO2-bH-sps" secondAttribute="leading" constant="157" id="FBU-qE-4cA"/>
                                         <constraint firstAttribute="trailing" secondItem="DFa-yW-qLr" secondAttribute="trailing" constant="157" id="GVW-ow-woz"/>
+                                        <constraint firstItem="P7C-iT-F2l" firstAttribute="centerY" secondItem="DFa-yW-qLr" secondAttribute="centerY" id="KXO-fJ-H3r"/>
                                         <constraint firstItem="DFa-yW-qLr" firstAttribute="top" secondItem="ZO2-bH-sps" secondAttribute="top" constant="123.5" id="W2d-tq-zMB"/>
                                         <constraint firstItem="fXA-sH-Kdb" firstAttribute="top" secondItem="DFa-yW-qLr" secondAttribute="bottom" constant="-34.5" id="aMY-gD-sFj"/>
                                         <constraint firstItem="DFa-yW-qLr" firstAttribute="centerX" secondItem="ZO2-bH-sps" secondAttribute="centerX" id="fAW-wb-Pla"/>
@@ -499,6 +509,7 @@
                                     <outlet property="likeView" destination="fXA-sH-Kdb" id="dHT-85-0gX"/>
                                     <outlet property="likeView1" destination="fh1-js-YF7" id="hRA-yI-Zlw"/>
                                     <outlet property="userFaceOfoneUser" destination="DFa-yW-qLr" id="uVv-0g-GnM"/>
+                                    <outlet property="userFaceOfoneUserNew" destination="P7C-iT-F2l" id="sH6-LQ-N9g"/>
                                     <outlet property="userNameOfOneUser" destination="A0b-hJ-Ooi" id="YEa-nO-iEk"/>
                                 </connections>
                             </collectionViewCell>
