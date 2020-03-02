@@ -29,6 +29,8 @@
 		CD2ED47223E4B0130034A2DD /* GlobalSearchGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2ED47123E4B0130034A2DD /* GlobalSearchGroup.swift */; };
 		CD31E95923FD679800618EBE /* FriendCellHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD31E95823FD679800618EBE /* FriendCellHeader.xib */; };
 		CD31E95B23FD69D900618EBE /* FriendCellVeiwHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD31E95A23FD69D900618EBE /* FriendCellVeiwHeader.swift */; };
+		CD56F898240D2E8500393839 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD56F897240D2E8500393839 /* CustomNavigationController.swift */; };
+		CD56F89A240D312500393839 /* CustomPopPushTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD56F899240D312500393839 /* CustomPopPushTransitioning.swift */; };
 		CD6BB14F23F15D60009637DC /* OneFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6BB14E23F15D60009637DC /* OneFriendCell.swift */; };
 		CD6BB15123F16271009637DC /* OneFriendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6BB15023F16271009637DC /* OneFriendController.swift */; };
 		CD6BB15323F17CAF009637DC /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6BB15223F17CAF009637DC /* GroupCell.swift */; };
@@ -87,6 +89,8 @@
 		CD2ED47123E4B0130034A2DD /* GlobalSearchGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalSearchGroup.swift; sourceTree = "<group>"; };
 		CD31E95823FD679800618EBE /* FriendCellHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendCellHeader.xib; sourceTree = "<group>"; };
 		CD31E95A23FD69D900618EBE /* FriendCellVeiwHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCellVeiwHeader.swift; sourceTree = "<group>"; };
+		CD56F897240D2E8500393839 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		CD56F899240D312500393839 /* CustomPopPushTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopPushTransitioning.swift; sourceTree = "<group>"; };
 		CD6BB14E23F15D60009637DC /* OneFriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneFriendCell.swift; sourceTree = "<group>"; };
 		CD6BB15023F16271009637DC /* OneFriendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneFriendController.swift; sourceTree = "<group>"; };
 		CD6BB15223F17CAF009637DC /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
@@ -212,6 +216,8 @@
 				37E1BB2823F0995E00924875 /* FriendsCell.swift */,
 				CD6FCF7223F5E774001384E4 /* TestView2.swift */,
 				CD83B60523F693BC0021E950 /* LikeView.swift */,
+				CD56F897240D2E8500393839 /* CustomNavigationController.swift */,
+				CD56F899240D312500393839 /* CustomPopPushTransitioning.swift */,
 				374452DB23F7370600584375 /* LikeView1.swift */,
 				CD6FCF6E23F5D022001384E4 /* UnderFaceView.swift */,
 				374452DD23F73B7E00584375 /* LikeCount1.swift */,
@@ -373,6 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD56F89A240D312500393839 /* CustomPopPushTransitioning.swift in Sources */,
 				37001D2123E0A37E00DA889E /* ViewController.swift in Sources */,
 				CD31E95B23FD69D900618EBE /* FriendCellVeiwHeader.swift in Sources */,
 				CD2ED46E23E4AAFE0034A2DD /* FriendsTableViewController.swift in Sources */,
@@ -385,6 +392,7 @@
 				CD6FCF7323F5E774001384E4 /* TestView2.swift in Sources */,
 				37A0D4852400779800A8B53D /* NewsCell.swift in Sources */,
 				CD2ED47223E4B0130034A2DD /* GlobalSearchGroup.swift in Sources */,
+				CD56F898240D2E8500393839 /* CustomNavigationController.swift in Sources */,
 				37648EAD240451E00038E411 /* DotsBack.swift in Sources */,
 				374452DE23F73B7E00584375 /* LikeCount1.swift in Sources */,
 				CD2ED47023E4AFCD0034A2DD /* UserGroup.swift in Sources */,
