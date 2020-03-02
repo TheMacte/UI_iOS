@@ -101,9 +101,9 @@ class FriendsTableViewController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowRU", let indexPath = tableView.indexPathForSelectedRow {
-            let friend = friends[indexPath.row].ruName
+            var friend = selections[indexPath.section][indexPath.row]
             let destinationViewController = segue.destination as? OneFriendController
-            destinationViewController?.friendNameRU = friends[indexPath.row].ruName
+            destinationViewController?.friendNameRU = friend
         }
     }
 }
