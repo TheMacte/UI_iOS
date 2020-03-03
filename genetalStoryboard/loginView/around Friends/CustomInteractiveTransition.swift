@@ -30,7 +30,7 @@ class CustomInteractiveTransition: UIPercentDrivenInteractiveTransition {
             let relativeTransition = translation.y / (gesture.view?.bounds.width ?? 1)
             let progress = max(0, min(1, relativeTransition)) // 0 <= progress <= 1
             self.shouldFinish = progress > 0.33
-            self.update(percentComplete)
+            self.update(progress)
         case .ended:
             self.hasStarted = false
             if self.shouldFinish {
