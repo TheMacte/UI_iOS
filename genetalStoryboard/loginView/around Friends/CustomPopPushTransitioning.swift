@@ -22,7 +22,7 @@ class CustomPushAnimater: NSObject, UIViewControllerAnimatedTransitioning {
         destination.view.frame = source.view.frame
         destination.view.transform = .init(rotationAngle: -.pi / 2)
         destination.view.frame.origin.x += destination.view.frame.width
-        //destination.view.frame.origin.y += destination.view.frame.height - destination.view.frame.height
+        destination.view.frame.origin.y -= (destination.view.frame.height - destination.view.frame.width) / 2
         
         UIView.animateKeyframes(withDuration: self.transitionDuration(using: transitionContext),
                                 delay: 0,
@@ -34,7 +34,7 @@ class CustomPushAnimater: NSObject, UIViewControllerAnimatedTransitioning {
                                                        animations: {
                                                         destination.view.transform = destination.view.transform.rotated(by: .pi / 2)
                                                         destination.view.frame.origin.x = 0
-                                                        //destination.view.frame.origin.y = 0
+                                                        destination.view.frame.origin.y = 0
                                     })
         }) { (finished) in
             if finished && !transitionContext.transitionWasCancelled{
@@ -59,7 +59,7 @@ class CustomPopAnimater: NSObject, UIViewControllerAnimatedTransitioning {
         destination.view.frame = source.view.frame
         destination.view.transform = .init(rotationAngle: .pi / 2)
         destination.view.frame.origin.x -= destination.view.frame.width
-        //destination.view.frame.origin.y += destination.view.frame.height - destination.view.frame.height
+        destination.view.frame.origin.y -= (destination.view.frame.height - destination.view.frame.width) / 2
         
         UIView.animateKeyframes(withDuration: self.transitionDuration(using: transitionContext),
                                 delay: 0,
@@ -71,7 +71,7 @@ class CustomPopAnimater: NSObject, UIViewControllerAnimatedTransitioning {
                                                        animations: {
                                                         destination.view.transform = destination.view.transform.rotated(by: -.pi / 2)
                                                         destination.view.frame.origin.x = 0
-                                                        //destination.view.frame.origin.y = 0
+                                                        destination.view.frame.origin.y = 0
                                     })
         }) { (finished) in
             if finished && !transitionContext.transitionWasCancelled{
