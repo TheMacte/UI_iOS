@@ -29,6 +29,7 @@
 		CD2ED47223E4B0130034A2DD /* GlobalSearchGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2ED47123E4B0130034A2DD /* GlobalSearchGroup.swift */; };
 		CD31E95923FD679800618EBE /* FriendCellHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD31E95823FD679800618EBE /* FriendCellHeader.xib */; };
 		CD31E95B23FD69D900618EBE /* FriendCellVeiwHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD31E95A23FD69D900618EBE /* FriendCellVeiwHeader.swift */; };
+		CD52759D240E3CC0000D9B71 /* CustomInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD52759C240E3CC0000D9B71 /* CustomInteractiveTransition.swift */; };
 		CD56F898240D2E8500393839 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD56F897240D2E8500393839 /* CustomNavigationController.swift */; };
 		CD56F89A240D312500393839 /* CustomPopPushTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD56F899240D312500393839 /* CustomPopPushTransitioning.swift */; };
 		CD6BB14F23F15D60009637DC /* OneFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6BB14E23F15D60009637DC /* OneFriendCell.swift */; };
@@ -89,6 +90,7 @@
 		CD2ED47123E4B0130034A2DD /* GlobalSearchGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalSearchGroup.swift; sourceTree = "<group>"; };
 		CD31E95823FD679800618EBE /* FriendCellHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendCellHeader.xib; sourceTree = "<group>"; };
 		CD31E95A23FD69D900618EBE /* FriendCellVeiwHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCellVeiwHeader.swift; sourceTree = "<group>"; };
+		CD52759C240E3CC0000D9B71 /* CustomInteractiveTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInteractiveTransition.swift; sourceTree = "<group>"; };
 		CD56F897240D2E8500393839 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		CD56F899240D312500393839 /* CustomPopPushTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopPushTransitioning.swift; sourceTree = "<group>"; };
 		CD6BB14E23F15D60009637DC /* OneFriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneFriendCell.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				CD83B60523F693BC0021E950 /* LikeView.swift */,
 				CD56F897240D2E8500393839 /* CustomNavigationController.swift */,
 				CD56F899240D312500393839 /* CustomPopPushTransitioning.swift */,
+				CD52759C240E3CC0000D9B71 /* CustomInteractiveTransition.swift */,
 				374452DB23F7370600584375 /* LikeView1.swift */,
 				CD6FCF6E23F5D022001384E4 /* UnderFaceView.swift */,
 				374452DD23F73B7E00584375 /* LikeCount1.swift */,
@@ -398,6 +401,7 @@
 				CD2ED47023E4AFCD0034A2DD /* UserGroup.swift in Sources */,
 				37001D1F23E0A37E00DA889E /* SceneDelegate.swift in Sources */,
 				CD6BB15723F18BF6009637DC /* Structs.swift in Sources */,
+				CD52759D240E3CC0000D9B71 /* CustomInteractiveTransition.swift in Sources */,
 				37E1BB2923F0995E00924875 /* FriendsCell.swift in Sources */,
 				37648EB5240453220038E411 /* DotsViewController.swift in Sources */,
 				CD83B60623F693BC0021E950 /* LikeView.swift in Sources */,
