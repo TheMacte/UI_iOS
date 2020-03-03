@@ -27,7 +27,7 @@ class CustomInteractiveTransition: UIPercentDrivenInteractiveTransition {
             self.viewController?.navigationController?.popViewController(animated: true)
         case .changed:
             let translation = gesture.translation(in: gesture.view)
-            let relativeTransition = translation.y / (gesture.view?.bounds.width ?? 1)
+            let relativeTransition = translation.y / (gesture.view?.bounds.height ?? 1)
             let progress = max(0, min(1, relativeTransition)) // 0 <= progress <= 1
             self.shouldFinish = progress > 0.33
             self.update(progress)
