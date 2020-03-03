@@ -13,17 +13,24 @@ class FriendsCell: UITableViewCell {
     @IBOutlet weak var FriendCellLable: UILabel!
     @IBOutlet weak var userPicView: UIImageView!
     
-    /*
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        //Ловим нажате
+        let tabGesture = UITapGestureRecognizer(target: self, action: #selector(tapped(_:)))
+        userPicView.isUserInteractionEnabled = true
+        userPicView.addGestureRecognizer(tabGesture)
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
- */
-
+    
+        //Обрабатываем нажатия
+        @objc func tapped(_ sender: UITapGestureRecognizer) {
+            let animation = CASpringAnimation(keyPath: "transform.scale")
+            animation.fromValue = 0.9
+            animation.toValue = 1
+            animation.stiffness = 200
+            animation.mass = 1
+            animation.duration = 1
+            animation.beginTime = CACurrentMediaTime()
+            animation.fillMode = CAMediaTimingFillMode.backwards
+            self.userPicView.layer.add(animation, forKey: nil)
+        }
 }
