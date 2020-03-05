@@ -146,20 +146,23 @@ extension OneFriendCell {
         userFaceOfoneUserNew.frame.origin.x += 106
         userFaceOfoneUserNew.isHidden = false
         userFaceOfoneUser.transform = CGAffineTransform(scaleX: 0.5,y: 0.5)
-        userFaceOfoneUser.alpha = 0.01
+        //userFaceOfoneUser.alpha = 0.01
         UIView.animateKeyframes(withDuration: 1,
                                 delay: 0,
                                 options: [],
                                 animations: {
                                     UIView.addKeyframe(withRelativeStartTime: 0,
-                                                       relativeDuration: 1,
+                                                       relativeDuration: 0.5,
                                                        animations: {
                                                         self.userFaceOfoneUserNew.transform = CGAffineTransform(scaleX: 0.01,y: 0.01)
                                                         self.userFaceOfoneUserNew.alpha = 0.5
+                                                        self.userFaceOfoneUserNew.frame.origin.x += 106
+                                    })
+                                    UIView.addKeyframe(withRelativeStartTime: 0.3,
+                                                       relativeDuration: 0.7,
+                                                       animations: {
                                                         self.userFaceOfoneUser.image = UIImage(named: self.allPik[self.photoCounter])
                                                         self.userFaceOfoneUser.transform = CGAffineTransform(scaleX: 1,y: 1)
-                                                        self.userFaceOfoneUserNew.frame.origin.x += 106
-                                                        self.userFaceOfoneUser.alpha = 1
                                     })
         },completion: {(true) -> Void in
             self.userFaceOfoneUserNew.transform = CGAffineTransform(scaleX: 1,y: 1)
@@ -175,6 +178,7 @@ extension OneFriendCell {
         } else {
             photoCounter = allPik.count - 1
         }
+        userFaceOfoneUserNew.frame.origin.x += 212
         userFaceOfoneUserNew.image = UIImage(named: allPik[self.photoCounter])
         userFaceOfoneUserNew.transform = CGAffineTransform(scaleX: 0.01,y: 0.01)
         userFaceOfoneUserNew.alpha = 0.01
@@ -184,20 +188,22 @@ extension OneFriendCell {
                                 options: [],
                                 animations: {
                                     UIView.addKeyframe(withRelativeStartTime: 0,
-                                                       relativeDuration: 1,
+                                                       relativeDuration: 0.7,
                                                        animations: {
-                                                        self.userFaceOfoneUserNew.transform = CGAffineTransform(scaleX: 1,y: 1)
                                                         self.userFaceOfoneUser.transform = CGAffineTransform(scaleX: 0.5,y: 0.5)
-                                                        self.userFaceOfoneUserNew.frame.origin.x += 106
+                                    })
+                                    UIView.addKeyframe(withRelativeStartTime: 0.5,
+                                                       relativeDuration: 0.5,
+                                                       animations: {
+                                                       self.userFaceOfoneUserNew.transform = CGAffineTransform(scaleX: 1,y: 1)
+                                                        self.userFaceOfoneUserNew.frame.origin.x -= 106
                                                         self.userFaceOfoneUserNew.alpha = 1
-                                                        self.userFaceOfoneUser.alpha = 0.01
                                     })
         },completion: {(true) -> Void in
             self.userFaceOfoneUser.transform = CGAffineTransform(scaleX: 1,y: 1)
             self.userFaceOfoneUser.image  = UIImage(named: self.allPik[self.photoCounter])
             self.userFaceOfoneUserNew.isHidden = true
             self.userFaceOfoneUserNew.frame.origin.x -= 106
-            self.userFaceOfoneUser.alpha = 1
         })
     }
 }
