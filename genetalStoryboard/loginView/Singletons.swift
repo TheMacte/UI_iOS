@@ -15,9 +15,4 @@ class Session {
     
     var token: String = .init();
     var userId: Int = .init();
-
-    func changeSwssion(token: String,  userId: Int){
-        self.token = token
-        self.userId = userId
-    }
 }
