@@ -42,6 +42,7 @@
 		CD6FCF7323F5E774001384E4 /* TestView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FCF7223F5E774001384E4 /* TestView2.swift */; };
 		CD77B3FC2403191C005C7E7E /* LikeViewNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD77B3FB2403191C005C7E7E /* LikeViewNews.swift */; };
 		CD83B60623F693BC0021E950 /* LikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD83B60523F693BC0021E950 /* LikeView.swift */; };
+		CDE082272418F8F400B93126 /* Singletons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE082262418F8F400B93126 /* Singletons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		CD6FCF7223F5E774001384E4 /* TestView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView2.swift; sourceTree = "<group>"; };
 		CD77B3FB2403191C005C7E7E /* LikeViewNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeViewNews.swift; sourceTree = "<group>"; };
 		CD83B60523F693BC0021E950 /* LikeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeView.swift; sourceTree = "<group>"; };
+		CDE082262418F8F400B93126 /* Singletons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singletons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				37001D2023E0A37E00DA889E /* ViewController.swift */,
 				37A0D4812400645700A8B53D /* NewsGroup */,
 				37001D2223E0A37E00DA889E /* Main.storyboard */,
+				CDE082262418F8F400B93126 /* Singletons.swift */,
 				37640C2A23F1E9E500010342 /* Model */,
 				37640C2B23F1EA0C00010342 /* around Groups */,
 				37640C2C23F1EA2D00010342 /* around Friends */,
@@ -397,6 +400,7 @@
 				CD2ED47223E4B0130034A2DD /* GlobalSearchGroup.swift in Sources */,
 				CD56F898240D2E8500393839 /* CustomNavigationController.swift in Sources */,
 				37648EAD240451E00038E411 /* DotsBack.swift in Sources */,
+				CDE082272418F8F400B93126 /* Singletons.swift in Sources */,
 				374452DE23F73B7E00584375 /* LikeCount1.swift in Sources */,
 				CD2ED47023E4AFCD0034A2DD /* UserGroup.swift in Sources */,
 				37001D1F23E0A37E00DA889E /* SceneDelegate.swift in Sources */,
